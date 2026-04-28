@@ -1,0 +1,1586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Apex Facilities | Professional Facilities Management — Las Vegas, NV
+    </title>
+    <meta
+      name="description"
+      content="Apex Facilities provides professional janitorial, building maintenance, floor care, waste management and commercial cleaning services in Las Vegas, NV and surrounding areas."
+    />
+    <meta
+      name="keywords"
+      content="facilities management Las Vegas, janitorial services Nevada, commercial cleaning Las Vegas, building maintenance NV"
+    />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* =============================================
+         APEX FACILITIES — index.html page styles
+         ============================================= */
+
+      /* ── HERO ─────────────────────────────────── */
+      .hero {
+        background: var(--color-primary);
+        position: relative;
+        overflow: hidden;
+        padding: clamp(3.5rem, 9vw, 6.5rem) 0 clamp(3rem, 7vw, 5.5rem);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 80% at 5% 60%,
+            rgba(45, 140, 202, 0.15) 0%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 45% 65% at 95% 10%,
+            rgba(255, 255, 255, 0.04) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 50% 40% at 50% 110%,
+            rgba(14, 124, 58, 0.06) 0%,
+            transparent 55%
+          );
+        pointer-events: none;
+      }
+
+      .hero .container {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(2rem, 5vw, 4.5rem);
+        align-items: center;
+      }
+
+      .hero-left {
+        display: grid;
+        gap: 1.5rem;
+      }
+      .hero-right {
+        position: relative;
+      }
+
+      .hero-img-main {
+        width: 100%;
+        height: 490px;
+        object-fit: cover;
+        border-radius: 1.25rem;
+        display: block;
+        box-shadow: 0 28px 72px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Floating stat card — bottom left */
+      .hero-float-card {
+        position: absolute;
+        bottom: -1.25rem;
+        left: -1.25rem;
+        background: #fff;
+        border-radius: 1rem;
+        padding: 1rem 1.25rem;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+        min-width: 210px;
+      }
+
+      .float-card-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      .float-card-text strong {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        line-height: 1.3;
+      }
+
+      .float-card-text span {
+        font-size: 0.75rem;
+        color: var(--color-text-muted);
+        font-weight: 500;
+      }
+
+      /* Floating badge — top right */
+      .hero-float-badge {
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        background: var(--color-cta);
+        border-radius: 0.875rem;
+        padding: 0.9rem 1.1rem;
+        box-shadow: 0 8px 24px rgba(14, 124, 58, 0.35);
+        text-align: center;
+        min-width: 115px;
+      }
+
+      .hero-float-badge strong {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1;
+      }
+
+      .hero-float-badge span {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.82);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-top: 0.25rem;
+        display: block;
+      }
+
+      .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent-light);
+        background: rgba(45, 140, 202, 0.15);
+        border: 1px solid rgba(45, 140, 202, 0.3);
+        padding: 0.4rem 1rem;
+        border-radius: 9999px;
+        width: fit-content;
+      }
+
+      .hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4.5vw, 3.4rem);
+        color: #fff;
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+      }
+
+      .hero h1 em {
+        font-style: normal;
+        color: var(--color-accent-light);
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.68);
+        line-height: 1.82;
+        max-width: 50ch;
+      }
+
+      .hero-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .hero-stat {
+        display: grid;
+        gap: 2px;
+      }
+
+      .hero-stat strong {
+        font-family: var(--font-display);
+        font-size: clamp(1.25rem, 2vw, 1.5rem);
+        font-weight: 800;
+        color: var(--color-accent-light);
+      }
+
+      .hero-stat span {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+      }
+
+      /* ── TRUST BAR ────────────────────────────── */
+      .trust-bar {
+        background: #fff;
+        border-bottom: 1px solid var(--color-border);
+        padding: 1rem 0;
+      }
+
+      .trust-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        padding: 0.45rem 1rem;
+        border-radius: 9999px;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        white-space: nowrap;
+      }
+
+      /* ── SERVICES GRID ────────────────────────── */
+      .services-overview-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .svc-card {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 2rem 1.5rem;
+        display: grid;
+        gap: 0.75rem;
+        align-content: start;
+        transition:
+          box-shadow 0.22s ease,
+          transform 0.22s ease,
+          border-color 0.22s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .svc-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--color-primary),
+          var(--color-accent)
+        );
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.28s ease;
+      }
+
+      .svc-card:hover {
+        box-shadow: 0 8px 28px rgba(26, 79, 138, 0.12);
+        transform: translateY(-3px);
+        border-color: rgba(45, 140, 202, 0.28);
+      }
+
+      .svc-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .svc-icon {
+        font-size: 2.25rem;
+        line-height: 1;
+      }
+
+      .svc-card h3 {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--color-primary);
+      }
+
+      .svc-card p {
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+        line-height: 1.78;
+      }
+
+      .card-link {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--color-accent);
+        text-decoration: none;
+        transition: color 0.2s ease;
+        margin-top: 0.25rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .card-link:hover {
+        color: var(--color-primary);
+      }
+
+      /* ── STATS SECTION ────────────────────────── */
+      .stats-section {
+        background: var(--color-primary);
+        padding: clamp(2.5rem, 6vw, 4rem) 0;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 2rem 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        transition:
+          background 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .stat-card:hover {
+        background: rgba(255, 255, 255, 0.09);
+        border-color: rgba(45, 140, 202, 0.4);
+      }
+
+      .stat-card h3 {
+        font-family: var(--font-display);
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+        color: var(--color-accent-light);
+        font-weight: 800;
+        margin-bottom: 0.4rem;
+      }
+
+      .stat-card p {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.5;
+      }
+
+      /* ── WHY GRID ─────────────────────────────── */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+
+      .why-card {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 2rem 1.5rem;
+        transition:
+          box-shadow 0.22s ease,
+          transform 0.22s ease;
+      }
+
+      .why-card:hover {
+        box-shadow: 0 8px 24px rgba(26, 79, 138, 0.1);
+        transform: translateY(-3px);
+      }
+
+      .why-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 0.75rem;
+        background: rgba(26, 79, 138, 0.08);
+        display: grid;
+        place-items: center;
+        font-size: 1.4rem;
+        margin-bottom: 1.1rem;
+      }
+
+      .why-card h3 {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 0.6rem;
+      }
+
+      .why-card p {
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+        line-height: 1.78;
+      }
+
+      /* ── INDUSTRIES STRIP ─────────────────────── */
+      .industries-strip {
+        background: var(--color-surface);
+      }
+
+      .industries-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.1rem;
+      }
+
+      .industry-card {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition:
+          box-shadow 0.22s ease,
+          transform 0.22s ease,
+          border-color 0.22s ease;
+      }
+
+      .industry-card:hover {
+        box-shadow: 0 6px 20px rgba(26, 79, 138, 0.1);
+        transform: translateY(-2px);
+        border-color: rgba(45, 140, 202, 0.3);
+      }
+
+      .industry-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 0.75rem;
+        background: rgba(26, 79, 138, 0.07);
+        display: grid;
+        place-items: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+
+      .industry-card h3 {
+        font-family: var(--font-display);
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 0.2rem;
+      }
+
+      .industry-card p {
+        font-size: 0.78rem;
+        color: var(--color-text-muted);
+        line-height: 1.55;
+      }
+
+      /* ── TESTIMONIALS ─────────────────────────── */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+
+      .testi-card {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 2rem 1.5rem;
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+        transition:
+          box-shadow 0.22s ease,
+          transform 0.22s ease;
+      }
+
+      .testi-card:hover {
+        box-shadow: 0 8px 24px rgba(26, 79, 138, 0.09);
+        transform: translateY(-2px);
+      }
+
+      .testi-stars {
+        color: #f59e0b;
+        font-size: 1rem;
+        letter-spacing: 3px;
+        line-height: 1;
+      }
+
+      .testi-card blockquote {
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+        line-height: 1.85;
+        font-style: italic;
+        margin: 0;
+      }
+
+      .testi-author {
+        padding-top: 1rem;
+        border-top: 1px solid var(--color-border);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .testi-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 0.875rem;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+
+      .testi-author-info strong {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--color-text);
+      }
+
+      .testi-author-info span {
+        font-size: 0.75rem;
+        color: var(--color-text-muted);
+      }
+
+      /* ── CTA SECTION ──────────────────────────── */
+      .cta-section {
+        padding: clamp(3rem, 7vw, 5rem) 0;
+        background: var(--color-surface);
+      }
+
+      .cta-box {
+        background: var(--color-primary);
+        border-radius: 1.5rem;
+        padding: clamp(2.5rem, 6vw, 4rem);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 55% 80% at 50% 120%,
+            rgba(45, 140, 202, 0.2) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 40% 50% at 90% -10%,
+            rgba(255, 255, 255, 0.04) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+      }
+
+      .cta-box > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-box .section-label {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .cta-box h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3vw, 2.25rem);
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+
+      .cta-box p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.68);
+        max-width: 52ch;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+        line-height: 1.78;
+      }
+
+      .cta-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      /* ── FOOTER ───────────────────────────────── */
+      .footer {
+        background: var(--color-primary-deeper);
+        padding-top: clamp(3rem, 6vw, 5rem);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.65fr repeat(3, 1fr);
+        gap: clamp(1.5rem, 4vw, 3rem);
+        padding-bottom: clamp(2.5rem, 5vw, 4rem);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-brand {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .footer-logo img {
+        height: 36px;
+        width: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+      .footer-logo-text {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #fff;
+      }
+
+      .footer-brand p {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.48);
+        line-height: 1.78;
+        max-width: 34ch;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.5;
+      }
+
+      .footer-contact-item a {
+        color: var(--color-accent-light);
+        transition: color 0.2s ease;
+      }
+
+      .footer-contact-item a:hover {
+        color: #fff;
+      }
+
+      .footer-col {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .footer-col h4 {
+        font-family: var(--font-body);
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .footer-col ul {
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .footer-col li,
+      .footer-col a {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.48);
+        transition: color 0.2s ease;
+        line-height: 1.5;
+        text-decoration: none;
+      }
+
+      .footer-col a:hover {
+        color: var(--color-accent-light);
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding-block: 1.5rem;
+      }
+
+      .footer-bottom p {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.3);
+        line-height: 1.5;
+      }
+
+      /* ── SHARED SECTION LABEL ─────────────────── */
+      .section-label {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        background: rgba(45, 140, 202, 0.1);
+        border: 1px solid rgba(45, 140, 202, 0.22);
+        padding: 0.3rem 0.8rem;
+        border-radius: 9999px;
+        margin-bottom: 1rem;
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 640px;
+        margin-inline: auto;
+        margin-bottom: clamp(2rem, 5vw, 3rem);
+      }
+
+      .section-header .section-label {
+        display: block;
+      }
+
+      .section-header h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+      }
+
+      .section-header p {
+        font-size: 1rem;
+        color: var(--color-text-muted);
+        max-width: 52ch;
+        margin-inline: auto;
+        line-height: 1.78;
+      }
+
+      .section {
+        padding: clamp(3rem, 7vw, 5rem) 0;
+      }
+      .alt-section {
+        background: var(--color-surface);
+      }
+
+      .section-cta {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      /* ── ABOUT STRIP ──────────────────────────── */
+      .about-strip-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(2rem, 6vw, 4.5rem);
+        align-items: center;
+      }
+
+      .about-strip-img-wrap {
+        border-radius: 1.25rem;
+        overflow: hidden;
+        box-shadow: 0 16px 48px rgba(26, 79, 138, 0.16);
+        position: relative;
+      }
+
+      .about-strip-img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.55s ease;
+      }
+
+      .about-strip-img-wrap:hover .about-strip-img {
+        transform: scale(1.03);
+      }
+
+      .about-strip-content {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .about-strip-content h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        color: var(--color-primary);
+        line-height: 1.2;
+      }
+
+      .about-strip-content p {
+        font-size: 0.9375rem;
+        color: var(--color-text-muted);
+        line-height: 1.8;
+      }
+
+      .check-list {
+        display: grid;
+        gap: 0.6rem;
+        margin-top: 0.5rem;
+      }
+
+      .check-list li {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .check-list li span.chk {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(14, 124, 58, 0.12);
+        color: var(--color-cta);
+        font-size: 0.7rem;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        font-weight: 800;
+      }
+
+      .about-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+      }
+
+      /* ── RESPONSIVE ───────────────────────────── */
+      @media (max-width: 1024px) {
+        .services-overview-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .testimonials-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .industries-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-brand {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero .container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .hero-left {
+          align-items: center;
+        }
+        .hero-eyebrow {
+          margin-inline: auto;
+        }
+        .hero-subtitle {
+          margin-inline: auto;
+        }
+        .hero-btns {
+          justify-content: center;
+        }
+        .hero-stats {
+          justify-content: center;
+        }
+        .hero-right {
+          max-width: 540px;
+          margin-inline: auto;
+        }
+        .hero-img-main {
+          height: 340px;
+        }
+        .hero-float-card {
+          left: 0.5rem;
+          bottom: -1rem;
+        }
+        .hero-float-badge {
+          right: 0.5rem;
+          top: -0.75rem;
+        }
+        .trust-items {
+          justify-content: center;
+        }
+        .about-strip-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .services-overview-grid {
+          grid-template-columns: 1fr;
+        }
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+        .industries-grid {
+          grid-template-columns: 1fr;
+        }
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-brand {
+          grid-column: auto;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-img-main {
+          height: 260px;
+        }
+        .hero-float-card,
+        .hero-float-badge {
+          display: none;
+        }
+        .trust-item {
+          font-size: 0.75rem;
+          padding: 0.4rem 0.7rem;
+        }
+        .cta-btns {
+          flex-direction: column;
+          align-items: center;
+        }
+        .cta-btns .btn {
+          width: 100%;
+          max-width: 320px;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════
+         HEADER
+         ═══════════════════════════════════ -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-text">Apex Facilities</span>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="quote.html" class="btn btn-cta nav-cta">Request a Quote</a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════
+         HERO
+         ═══════════════════════════════════ -->
+    <section class="hero">
+      <div class="container">
+        <!-- Left — Content -->
+        <div class="hero-left">
+          <span class="hero-eyebrow">🏢 Las Vegas, Nevada</span>
+
+          <h1>
+            Professional Facilities<br />
+            <em>Management Services</em>
+          </h1>
+
+          <p class="hero-subtitle">
+            Apex Facilities delivers clean, safe and well-maintained spaces for
+            commercial and residential clients across Las Vegas and Nevada.
+            Janitorial, maintenance, floor care and more — handled by
+            experienced professionals you can count on.
+          </p>
+
+          <div class="hero-btns">
+            <a href="quote.html" class="btn btn-cta">Get a Free Quote →</a>
+            <a href="services.html" class="btn btn-outline-light"
+              >Our Services</a
+            >
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>500+</strong>
+              <span>Clients Served</span>
+            </div>
+            <div class="hero-stat">
+              <strong>15+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="hero-stat">
+              <strong>5</strong>
+              <span>Core Services</span>
+            </div>
+            <div class="hero-stat">
+              <strong>100%</strong>
+              <span>Satisfaction Focus</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right — Image with floating elements -->
+        <div class="hero-right">
+          <img
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80&fit=crop"
+            alt="Professional facilities management team at work"
+            class="hero-img-main"
+            loading="eager"
+            width="900"
+            height="490"
+          />
+
+          <!-- Floating bottom-left card -->
+          <div class="hero-float-card">
+            <div class="float-card-icon">✅</div>
+            <div class="float-card-text">
+              <strong>Licensed &amp; Insured</strong>
+              <span>Fully bonded · Background checked</span>
+            </div>
+          </div>
+
+          <!-- Floating top-right badge -->
+          <div class="hero-float-badge">
+            <strong>500+</strong>
+            <span>Happy Clients</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         TRUST BAR
+         ═══════════════════════════════════ -->
+    <section class="trust-bar">
+      <div class="container">
+        <div class="trust-items">
+          <div class="trust-item">✅ <span>Licensed &amp; Insured</span></div>
+          <div class="trust-item">🔒 <span>Background Checked Staff</span></div>
+          <div class="trust-item">🏆 <span>15+ Years Experience</span></div>
+          <div class="trust-item">📋 <span>Custom Service Plans</span></div>
+          <div class="trust-item">📞 <span>24/7 Support Available</span></div>
+          <div class="trust-item">♻️ <span>Eco-Friendly Products</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         SERVICES OVERVIEW
+         ═══════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What We Do</span>
+          <h2>Our Core Services</h2>
+          <p>
+            From daily janitorial services to complete building maintenance —
+            Apex Facilities delivers professional, reliable facility solutions
+            tailored to your needs.
+          </p>
+        </div>
+
+        <div class="services-overview-grid">
+          <div class="svc-card">
+            <div class="svc-icon">🧹</div>
+            <h3>Janitorial &amp; Cleaning Services</h3>
+            <p>
+              Daily, weekly or customised cleaning schedules for offices,
+              buildings and commercial spaces — professionally executed every
+              visit.
+            </p>
+            <a href="services.html" class="card-link">Learn more →</a>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-icon">🔧</div>
+            <h3>Building Maintenance</h3>
+            <p>
+              Preventive and reactive maintenance services to keep your building
+              systems, fixtures and infrastructure in top condition year-round.
+            </p>
+            <a href="services.html" class="card-link">Learn more →</a>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-icon">✨</div>
+            <h3>Floor Care</h3>
+            <p>
+              Expert floor stripping, waxing, buffing and deep cleaning for all
+              floor types — tile, hardwood, carpet, vinyl and more.
+            </p>
+            <a href="services.html" class="card-link">Learn more →</a>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-icon">♻️</div>
+            <h3>Waste Management</h3>
+            <p>
+              Reliable waste collection, removal and recycling services designed
+              to keep your facility clean, compliant and environmentally
+              responsible.
+            </p>
+            <a href="services.html" class="card-link">Learn more →</a>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-icon">🏢</div>
+            <h3>Office &amp; Commercial Cleaning</h3>
+            <p>
+              Comprehensive commercial cleaning for offices, retail spaces,
+              healthcare facilities and more — creating a clean environment that
+              impresses.
+            </p>
+            <a href="services.html" class="card-link">Learn more →</a>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-icon">📋</div>
+            <h3>Custom Facility Plans</h3>
+            <p>
+              We assess your space and build a fully customised facility
+              management plan that meets your schedule, budget and quality
+              requirements.
+            </p>
+            <a href="quote.html" class="card-link">Get a plan →</a>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <a href="services.html" class="btn btn-primary">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         STATS BANNER
+         ═══════════════════════════════════ -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>500+</h3>
+            <p>Commercial &amp; residential clients served</p>
+          </div>
+          <div class="stat-card">
+            <h3>15+</h3>
+            <p>Years of facilities management experience</p>
+          </div>
+          <div class="stat-card">
+            <h3>5</h3>
+            <p>Specialised core service areas</p>
+          </div>
+          <div class="stat-card">
+            <h3>6</h3>
+            <p>Industries we serve across Nevada</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         WHY CHOOSE APEX
+         ═══════════════════════════════════ -->
+    <section class="section alt-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Why Apex Facilities</span>
+          <h2>The Right Facilities Partner</h2>
+          <p>
+            We don't just clean buildings — we maintain the environments where
+            your business runs and your people thrive.
+          </p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">🏆</div>
+            <h3>Experienced &amp; Professional</h3>
+            <p>
+              Over 15 years in facilities management. Our trained teams follow
+              strict protocols to deliver consistent, high-quality results on
+              every visit.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">🔒</div>
+            <h3>Licensed, Insured &amp; Bonded</h3>
+            <p>
+              Every team member is background-checked, bonded and covered by
+              full liability insurance — so you can trust us with your space.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">📋</div>
+            <h3>Customised Service Plans</h3>
+            <p>
+              No one-size-fits-all. We build a facility management plan
+              specifically for your space, schedule and budget requirements.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">♻️</div>
+            <h3>Eco-Friendly Practices</h3>
+            <p>
+              We use environmentally responsible cleaning products and
+              sustainable practices to protect your staff, clients and the
+              planet.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">📞</div>
+            <h3>Responsive &amp; Reliable</h3>
+            <p>
+              Questions, urgent needs or schedule changes — our team is
+              responsive, communicative and always ready to resolve issues fast.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">💰</div>
+            <h3>Competitive &amp; Transparent Pricing</h3>
+            <p>
+              Clear, upfront quotes with no hidden fees. We offer competitive
+              pricing and flexible packages that deliver real value for your
+              investment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         ABOUT STRIP
+         ═══════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="about-strip-grid">
+          <div class="about-strip-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop"
+              alt="Apex Facilities professional cleaning team"
+              class="about-strip-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+          </div>
+
+          <div class="about-strip-content">
+            <span class="section-label">About Apex Facilities</span>
+            <h2>Las Vegas's Trusted Facilities Management Company</h2>
+            <p>
+              Apex Facilities has been serving commercial and residential
+              clients across Las Vegas, NV for over 15 years. Founded on the
+              principles of reliability, professionalism and service excellence
+              — we bring the same level of care to every facility we manage.
+            </p>
+            <p>
+              Whether you need daily janitorial services, scheduled building
+              maintenance or a comprehensive facilities management plan — we
+              have the team, the experience and the commitment to deliver.
+            </p>
+            <ul class="check-list">
+              <li>
+                <span class="chk">✓</span> Serving Las Vegas &amp; surrounding
+                Nevada areas
+              </li>
+              <li>
+                <span class="chk">✓</span> Commercial and residential clients
+                welcome
+              </li>
+              <li>
+                <span class="chk">✓</span> Trained, uniformed &amp;
+                background-checked staff
+              </li>
+              <li>
+                <span class="chk">✓</span> Flexible scheduling — daily, weekly
+                or custom
+              </li>
+            </ul>
+            <div class="about-btns">
+              <a href="about.html" class="btn btn-primary">Our Story</a>
+              <a href="quote.html" class="btn btn-outline-primary"
+                >Get a Quote</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         INDUSTRIES WE SERVE
+         ═══════════════════════════════════ -->
+    <section class="section industries-strip alt-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Industries We Serve</span>
+          <h2>Facilities Management Across All Sectors</h2>
+          <p>
+            We work with clients across a wide range of industries — bringing
+            the same professionalism and attention to detail to every sector.
+          </p>
+        </div>
+        <div class="industries-grid">
+          <div class="industry-card">
+            <div class="industry-icon">🏥</div>
+            <div>
+              <h3>Healthcare</h3>
+              <p>Clinics, medical offices &amp; healthcare facilities</p>
+            </div>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-icon">🎓</div>
+            <div>
+              <h3>Education</h3>
+              <p>Schools, colleges &amp; training centres</p>
+            </div>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-icon">🏢</div>
+            <div>
+              <h3>Corporate Offices</h3>
+              <p>Office buildings, co-working &amp; business parks</p>
+            </div>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-icon">🛍️</div>
+            <div>
+              <h3>Retail</h3>
+              <p>Shops, shopping centres &amp; showrooms</p>
+            </div>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-icon">🏛️</div>
+            <div>
+              <h3>Government</h3>
+              <p>Municipal buildings &amp; government facilities</p>
+            </div>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-icon">🏠</div>
+            <div>
+              <h3>Residential</h3>
+              <p>Apartment complexes &amp; residential properties</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-cta">
+          <a href="industries.html" class="btn btn-primary">All Industries</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         TESTIMONIALS
+         ═══════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Client Reviews</span>
+          <h2>What Our Clients Say</h2>
+          <p>
+            Trusted by businesses and property managers across Las Vegas and
+            Nevada.
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>
+              "Apex Facilities has managed our office building for two years.
+              The team is always professional, thorough and on time. Our tenants
+              consistently praise the cleanliness — we wouldn't use anyone
+              else."
+            </blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">MR</div>
+              <div class="testi-author-info">
+                <strong>Marcus R.</strong>
+                <span>Property Manager, Las Vegas NV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>
+              "We hired Apex for floor care and deep cleaning in our medical
+              clinic. The results were outstanding — spotless, professional and
+              completed with minimal disruption to our operations."
+            </blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">SL</div>
+              <div class="testi-author-info">
+                <strong>Sandra L.</strong>
+                <span>Clinic Operations Director, Henderson NV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>
+              "Reliable, affordable and genuinely professional. Apex set up a
+              custom cleaning schedule that works perfectly for our retail
+              space. The staff are friendly and the quality never drops."
+            </blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">DK</div>
+              <div class="testi-author-info">
+                <strong>David K.</strong>
+                <span>Retail Store Owner, Las Vegas NV</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         CTA
+         ═══════════════════════════════════ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="section-label">Ready to Get Started?</span>
+          <h2>Request a Free Facilities Quote</h2>
+          <p>
+            Tell us about your facility and we'll get back to you within one
+            business day with a customised, no-obligation quote.
+          </p>
+          <div class="cta-btns">
+            <a href="quote.html" class="btn btn-cta">Get a Free Quote →</a>
+            <a href="tel:+17029695582" class="btn btn-outline-light"
+              >📞 (702) 969-5582</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Apex Facilities" />
+            <span class="footer-logo-text">Apex Facilities</span>
+          </div>
+          <p>
+            Professional facilities management services in Las Vegas, NV.
+            Janitorial, maintenance, floor care and more for commercial and
+            residential clients.
+          </p>
+          <div style="display: grid; gap: 0.5rem; margin-top: 0.25rem">
+            <div class="footer-contact-item">
+              📍 4335 China Silk Ct, Las Vegas, NV 89129
+            </div>
+            <div class="footer-contact-item">
+              📞 <a href="tel:+17029695582">(702) 969-5582</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Janitorial &amp; Cleaning</a></li>
+            <li><a href="services.html">Building Maintenance</a></li>
+            <li><a href="services.html">Floor Care</a></li>
+            <li><a href="services.html">Waste Management</a></li>
+            <li>
+              <a href="services.html">Office &amp; Commercial Cleaning</a>
+            </li>
+            <li><a href="quote.html">Custom Plans</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="industries.html">Healthcare</a></li>
+            <li><a href="industries.html">Education</a></li>
+            <li><a href="industries.html">Corporate Offices</a></li>
+            <li><a href="industries.html">Retail</a></li>
+            <li><a href="industries.html">Government</a></li>
+            <li><a href="industries.html">Residential</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Apex Facilities. All rights reserved. | Las Vegas, Nevada</p>
+        <p>Licensed · Insured · Bonded</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

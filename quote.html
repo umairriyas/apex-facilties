@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request a Quote | Apex Facilities — Las Vegas, NV</title>
+    <meta name="description" content="Request a free, no-obligation facilities management quote from Apex Facilities in Las Vegas, NV. Janitorial, maintenance, floor care and more." />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* ── PAGE HERO ────────────────────────────── */
+      .page-hero {
+        background: var(--color-primary);
+        padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 7vw, 5rem);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .page-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 60% 80% at 5% 60%, rgba(45,140,202,0.14) 0%, transparent 65%),
+          radial-gradient(ellipse 50% 60% at 95% 10%, rgba(255,255,255,0.03) 0%, transparent 55%);
+        pointer-events: none;
+      }
+
+      .page-hero .container { position: relative; z-index: 1; }
+
+      .page-hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent-light);
+        background: rgba(45,140,202,0.15);
+        border: 1px solid rgba(45,140,202,0.3);
+        padding: 0.35rem 0.9rem;
+        border-radius: 9999px;
+        margin-bottom: 1.25rem;
+      }
+
+      .page-hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4.5vw, 3.25rem);
+        color: #fff;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+      }
+
+      .page-hero h1 em {
+        font-style: normal;
+        color: var(--color-accent-light);
+      }
+
+      .page-hero-desc {
+        font-size: 1rem;
+        color: rgba(255,255,255,0.65);
+        line-height: 1.82;
+        max-width: 52ch;
+        margin-inline: auto;
+      }
+
+      /* Trust badges in hero */
+      .hero-trust-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1.75rem;
+      }
+
+      .hero-trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: rgba(255,255,255,0.75);
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.14);
+        padding: 0.4rem 0.9rem;
+        border-radius: 9999px;
+      }
+
+      /* ── QUOTE SECTION ────────────────────────── */
+      .quote-section {
+        padding: clamp(3.5rem, 8vw, 6rem) 0;
+        background: var(--color-surface);
+      }
+
+      .quote-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.75fr;
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: start;
+      }
+
+      /* ── SIDEBAR ──────────────────────────────── */
+      .quote-sidebar { display: grid; gap: 1.25rem; }
+
+      .sidebar-intro { display: grid; gap: 0.75rem; }
+
+      .sidebar-intro h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+        color: var(--color-primary);
+        line-height: 1.2;
+      }
+
+      .sidebar-intro p {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+        line-height: 1.78;
+      }
+
+      /* Why choose us checklist */
+      .sidebar-why {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .sidebar-why h4 {
+        font-family: var(--font-display);
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 0.25rem;
+      }
+
+      .why-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.855rem;
+        color: var(--color-text);
+        line-height: 1.55;
+      }
+
+      .why-item .chk {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(14,124,58,0.1);
+        color: var(--color-cta);
+        font-size: 0.65rem;
+        font-weight: 800;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      /* Call card */
+      .call-card {
+        background: var(--color-primary);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        display: grid;
+        gap: 0.6rem;
+        text-align: center;
+      }
+
+      .call-card p {
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.65);
+        line-height: 1.55;
+      }
+
+      .call-card a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: var(--color-accent-light);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .call-card a:hover { color: #fff; }
+
+      .call-card span {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.45);
+      }
+
+      /* ── MULTI-STEP FORM ──────────────────────── */
+      .quote-form-wrap {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 1.25rem;
+        padding: clamp(2rem, 5vw, 3rem);
+        box-shadow: 0 8px 32px rgba(26,79,138,0.07);
+      }
+
+      /* Step progress indicator */
+      .step-progress {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 2.25rem;
+      }
+
+      .step-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        flex: 1;
+        position: relative;
+      }
+
+      .step-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        right: -50%;
+        height: 2px;
+        background: var(--color-border);
+        z-index: 0;
+        transition: background 0.3s ease;
+      }
+
+      .step-item.completed:not(:last-child)::after {
+        background: var(--color-primary);
+      }
+
+      .step-num {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 2px solid var(--color-border);
+        background: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--color-text-muted);
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+
+      .step-item.active .step-num {
+        border-color: var(--color-primary);
+        background: var(--color-primary);
+        color: #fff;
+      }
+
+      .step-item.completed .step-num {
+        border-color: var(--color-primary);
+        background: var(--color-primary);
+        color: #fff;
+      }
+
+      .step-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--color-text-faint);
+        text-align: center;
+        white-space: nowrap;
+        transition: color 0.3s ease;
+      }
+
+      .step-item.active .step-label,
+      .step-item.completed .step-label {
+        color: var(--color-primary);
+      }
+
+      /* Step panels */
+      .step-panel { display: none; }
+      .step-panel.active { display: block; }
+
+      .step-header { margin-bottom: 1.75rem; }
+
+      .step-header h3 {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 0.35rem;
+      }
+
+      .step-header p {
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+        line-height: 1.6;
+      }
+
+      /* Form fields */
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.1rem;
+      }
+
+      .form-group { display: grid; gap: 0.4rem; }
+      .form-group.full { grid-column: 1 / -1; }
+
+      .form-group label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--color-text);
+        letter-spacing: 0.02em;
+      }
+
+      .form-group label span { color: var(--color-cta); margin-left: 2px; }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.72rem 0.95rem;
+        border: 1.5px solid var(--color-border);
+        border-radius: var(--radius-md);
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        color: var(--color-text);
+        background: var(--color-surface);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 3px rgba(45,140,202,0.12);
+        background: #fff;
+      }
+
+      .form-group input::placeholder,
+      .form-group textarea::placeholder { color: var(--color-text-faint); }
+
+      .form-group select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        padding-right: 2.5rem;
+        cursor: pointer;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 110px;
+        line-height: 1.65;
+      }
+
+      /* Service checkboxes (Step 2) */
+      .services-check-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-top: 0.25rem;
+      }
+
+      .service-check-label {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.85rem 1rem;
+        border: 1.5px solid var(--color-border);
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--color-text);
+        background: var(--color-surface);
+        transition: all 0.18s ease;
+        user-select: none;
+      }
+
+      .service-check-label:hover {
+        border-color: var(--color-accent);
+        background: rgba(45,140,202,0.04);
+      }
+
+      .service-check-label input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        accent-color: var(--color-primary);
+        flex-shrink: 0;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+        background: none;
+      }
+
+      .service-check-label:has(input:checked) {
+        border-color: var(--color-primary);
+        background: rgba(26,79,138,0.06);
+        color: var(--color-primary);
+      }
+
+      .service-check-icon { font-size: 1rem; line-height: 1; }
+
+      /* Frequency radio pills */
+      .freq-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 0.25rem;
+      }
+
+      .freq-label {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.55rem 1rem;
+        border: 1.5px solid var(--color-border);
+        border-radius: 9999px;
+        cursor: pointer;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--color-text-muted);
+        background: var(--color-surface);
+        transition: all 0.18s ease;
+        user-select: none;
+      }
+
+      .freq-label:hover {
+        border-color: var(--color-accent);
+        color: var(--color-text);
+      }
+
+      .freq-label input[type="radio"] {
+        width: 14px;
+        height: 14px;
+        accent-color: var(--color-primary);
+        flex-shrink: 0;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+        background: none;
+      }
+
+      .freq-label:has(input:checked) {
+        border-color: var(--color-primary);
+        background: rgba(26,79,138,0.07);
+        color: var(--color-primary);
+      }
+
+      /* Step navigation buttons */
+      .step-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.75rem;
+        gap: 1rem;
+      }
+
+      .step-nav .btn { min-width: 140px; justify-content: center; }
+
+      .step-counter {
+        font-size: 0.78rem;
+        color: var(--color-text-faint);
+        font-weight: 600;
+      }
+
+      /* ── SUCCESS STATE ────────────────────────── */
+      .quote-success {
+        display: none;
+        text-align: center;
+        padding: 3rem 2rem;
+      }
+
+      .quote-success-icon {
+        font-size: 4rem;
+        margin-bottom: 1.25rem;
+        line-height: 1;
+      }
+
+      .quote-success h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 0.75rem;
+      }
+
+      .quote-success p {
+        font-size: 0.9375rem;
+        color: var(--color-text-muted);
+        line-height: 1.72;
+        max-width: 42ch;
+        margin-inline: auto;
+        margin-bottom: 1.5rem;
+      }
+
+      /* ── SHARED LABEL ─────────────────────────── */
+      .section-label {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        background: rgba(45,140,202,0.1);
+        border: 1px solid rgba(45,140,202,0.22);
+        padding: 0.3rem 0.8rem;
+        border-radius: 9999px;
+        margin-bottom: 1rem;
+      }
+
+      /* ── FOOTER ───────────────────────────────── */
+      .footer {
+        background: var(--color-primary-deeper);
+        padding-top: clamp(3rem, 6vw, 5rem);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.65fr repeat(3, 1fr);
+        gap: clamp(1.5rem, 4vw, 3rem);
+        padding-bottom: clamp(2.5rem, 5vw, 4rem);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .footer-brand { display: grid; gap: 1rem; align-content: start; }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .footer-logo img { height: 36px; width: auto; object-fit: contain; }
+
+      .footer-logo-text {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #fff;
+      }
+
+      .footer-brand p {
+        font-size: 0.875rem;
+        color: rgba(255,255,255,0.48);
+        line-height: 1.78;
+        max-width: 34ch;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.55);
+        line-height: 1.5;
+      }
+
+      .footer-contact-item a {
+        color: var(--color-accent-light);
+        transition: color 0.2s ease;
+      }
+
+      .footer-contact-item a:hover { color: #fff; }
+
+      .footer-col { display: grid; gap: 1rem; align-content: start; }
+
+      .footer-col h4 {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .footer-col ul { display: grid; gap: 0.5rem; }
+
+      .footer-col li,
+      .footer-col a {
+        font-size: 0.875rem;
+        color: rgba(255,255,255,0.48);
+        transition: color 0.2s ease;
+        line-height: 1.5;
+        text-decoration: none;
+      }
+
+      .footer-col a:hover { color: var(--color-accent-light); }
+
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding-block: 1.5rem;
+      }
+
+      .footer-bottom p {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.3);
+      }
+
+      /* ── RESPONSIVE ───────────────────────────── */
+      @media (max-width: 1024px) {
+        .quote-grid      { grid-template-columns: 1fr; }
+        .footer-grid     { grid-template-columns: 1fr 1fr; }
+        .footer-brand    { grid-column: 1 / -1; }
+      }
+
+      @media (max-width: 640px) {
+        .form-grid              { grid-template-columns: 1fr; }
+        .form-group.full        { grid-column: auto; }
+        .services-check-grid    { grid-template-columns: 1fr; }
+        .step-label             { display: none; }
+        .footer-grid            { grid-template-columns: 1fr; }
+        .footer-brand           { grid-column: auto; }
+        .footer-bottom          { flex-direction: column; text-align: center; }
+        .step-nav .btn          { min-width: 110px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+          
+            <span class="logo-text">Apex Facilities</span>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="quote.html" class="btn btn-cta nav-cta active">Request a Quote</a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- ═══════════════════════════════════
+         PAGE HERO
+         ═══════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="page-hero-eyebrow">💬 Free Quote</span>
+        <h1>Request a <em>Free Quote</em></h1>
+        <p class="page-hero-desc">
+          Tell us about your facility and the services you need — we'll
+          respond within one business day with a clear, tailored and
+          completely no-obligation proposal.
+        </p>
+        <div class="hero-trust-row">
+          <span class="hero-trust-badge">✅ No obligation</span>
+          <span class="hero-trust-badge">⚡ 1-day response</span>
+          <span class="hero-trust-badge">🔒 100% confidential</span>
+          <span class="hero-trust-badge">🏆 15+ years experience</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════
+         QUOTE SECTION
+         ═══════════════════════════════════ -->
+    <section class="quote-section">
+      <div class="container">
+        <div class="quote-grid">
+
+          <!-- SIDEBAR -->
+          <aside class="quote-sidebar">
+
+            <div class="sidebar-intro">
+              <span class="section-label">Why Choose Apex?</span>
+              <h2>What Happens After You Submit</h2>
+              <p>
+                We review every quote request personally — no bots, no
+                automated replies. Here's what to expect:
+              </p>
+            </div>
+
+            <div class="sidebar-why">
+              <h4>Our Quote Process</h4>
+              <div class="why-item">
+                <span class="chk">1</span>
+                <span>You submit your quote request with facility details</span>
+              </div>
+              <div class="why-item">
+                <span class="chk">2</span>
+                <span>Our team reviews your requirements within 1 business day</span>
+              </div>
+              <div class="why-item">
+                <span class="chk">3</span>
+                <span>We contact you to clarify details if needed</span>
+              </div>
+              <div class="why-item">
+                <span class="chk">4</span>
+                <span>You receive a clear, itemised proposal at no cost</span>
+              </div>
+              <div class="why-item">
+                <span class="chk">5</span>
+                <span>No pressure — accept, decline or ask questions freely</span>
+              </div>
+            </div>
+
+            <div class="sidebar-why">
+              <h4>Why Clients Choose Us</h4>
+              <div class="why-item">
+                <span class="chk">✓</span>
+                <span>Licensed, insured &amp; bonded on every job</span>
+              </div>
+              <div class="why-item">
+                <span class="chk">✓</span>
+                <span>Background-checked, uniformed staff</span>
+              </div>
+              <div class="why-item">
+                <span class="chk">✓</span>
+                <span>15+ years serving Las Vegas &amp; Nevada</span>
+              </div>
+              <div class="why-item">
+                <span class="chk">✓</span>
+                <span>Custom plans — no cookie-cutter contracts</span>
+              </div>
+              <div class="why-item">
+                <span class="chk">✓</span>
+                <span>Eco-friendly products &amp; green cleaning options</span>
+              </div>
+              <div class="why-item">
+                <span class="chk">✓</span>
+                <span>Dedicated account manager for every client</span>
+              </div>
+            </div>
+
+            <div class="call-card">
+              <p>Prefer to talk? Call us directly:</p>
+              <a href="tel:+17029695582">📞 (702) 969-5582</a>
+              <span>Mon–Fri 7AM–6PM · Sat 8AM–4PM</span>
+            </div>
+
+          </aside>
+
+
+          <!-- MULTI-STEP FORM -->
+          <div class="quote-form-wrap">
+
+            <!-- Step progress -->
+            <div class="step-progress" id="step-progress">
+              <div class="step-item active" data-step="1">
+                <div class="step-num">1</div>
+                <span class="step-label">Your Details</span>
+              </div>
+              <div class="step-item" data-step="2">
+                <div class="step-num">2</div>
+                <span class="step-label">Services</span>
+              </div>
+              <div class="step-item" data-step="3">
+                <div class="step-num">3</div>
+                <span class="step-label">Facility</span>
+              </div>
+              <div class="step-item" data-step="4">
+                <div class="step-num">4</div>
+                <span class="step-label">Review</span>
+              </div>
+            </div>
+
+            <form
+              id="quote-form"
+              action="https://formsubmit.co/your@email.com"
+              method="POST"
+            >
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="New Quote Request — Apex Facilities" />
+              <input type="hidden" name="_next" value="quote.html?sent=true" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" style="display:none" />
+
+
+              <!-- ── STEP 1: Your Details ── -->
+              <div class="step-panel active" id="step-1">
+                <div class="step-header">
+                  <h3>👤 Your Contact Details</h3>
+                  <p>Tell us who you are so we can get back to you with your quote.</p>
+                </div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="q-first">First Name <span>*</span></label>
+                    <input type="text" id="q-first" name="first_name" placeholder="John" required autocomplete="given-name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="q-last">Last Name <span>*</span></label>
+                    <input type="text" id="q-last" name="last_name" placeholder="Smith" required autocomplete="family-name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="q-email">Email Address <span>*</span></label>
+                    <input type="email" id="q-email" name="email" placeholder="john@company.com" required autocomplete="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="q-phone">Phone Number <span>*</span></label>
+                    <input type="tel" id="q-phone" name="phone" placeholder="(702) 000-0000" required autocomplete="tel" />
+                  </div>
+                  <div class="form-group full">
+                    <label for="q-company">Company / Organisation Name</label>
+                    <input type="text" id="q-company" name="company" placeholder="Acme Corp (leave blank if residential)" autocomplete="organization" />
+                  </div>
+                  <div class="form-group full">
+                    <label for="q-role">Your Role / Title</label>
+                    <input type="text" id="q-role" name="role" placeholder="e.g. Facilities Manager, Property Owner, Office Manager" />
+                  </div>
+                </div>
+                <div class="step-nav">
+                  <span class="step-counter">Step 1 of 4</span>
+                  <button type="button" class="btn btn-primary" onclick="goToStep(2)">Next: Services →</button>
+                </div>
+              </div>
+
+
+              <!-- ── STEP 2: Services ── -->
+              <div class="step-panel" id="step-2">
+                <div class="step-header">
+                  <h3>🧹 Services Required</h3>
+                  <p>Select all the services you're interested in — you can choose more than one.</p>
+                </div>
+
+                <div class="form-group full">
+                  <label>Services Needed <span>*</span></label>
+                  <div class="services-check-grid">
+                    <label class="service-check-label">
+                      <input type="checkbox" name="services[]" value="Janitorial &amp; Cleaning" />
+                      <span class="service-check-icon">🧹</span>
+                      Janitorial &amp; Cleaning
+                    </label>
+                    <label class="service-check-label">
+                      <input type="checkbox" name="services[]" value="Building Maintenance" />
+                      <span class="service-check-icon">🔧</span>
+                      Building Maintenance
+                    </label>
+                    <label class="service-check-label">
+                      <input type="checkbox" name="services[]" value="Floor Care" />
+                      <span class="service-check-icon">✨</span>
+                      Floor Care
+                    </label>
+                    <label class="service-check-label">
+                      <input type="checkbox" name="services[]" value="Waste Management" />
+                      <span class="service-check-icon">♻️</span>
+                      Waste Management
+                    </label>
+                    <label class="service-check-label">
+                      <input type="checkbox" name="services[]" value="Office &amp; Commercial Cleaning" />
+                      <span class="service-check-icon">🏢</span>
+                      Office &amp; Commercial Cleaning
+                    </label>
+                    <label class="service-check-label">
+                      <input type="checkbox" name="services[]" value="Custom Facility Plan" />
+                      <span class="service-check-icon">📋</span>
+                      Custom Facility Plan
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group full" style="margin-top:1.25rem;">
+                  <label>Preferred Service Frequency</label>
+                  <div class="freq-grid">
+                    <label class="freq-label"><input type="radio" name="frequency" value="Daily" /> Daily</label>
+                    <label class="freq-label"><input type="radio" name="frequency" value="3x per week" /> 3× per week</label>
+                    <label class="freq-label"><input type="radio" name="frequency" value="Weekly" /> Weekly</label>
+                    <label class="freq-label"><input type="radio" name="frequency" value="Bi-weekly" /> Bi-weekly</label>
+                    <label class="freq-label"><input type="radio" name="frequency" value="Monthly" /> Monthly</label>
+                    <label class="freq-label"><input type="radio" name="frequency" value="One-time / Deep clean" /> One-time / Deep clean</label>
+                    <label class="freq-label"><input type="radio" name="frequency" value="Not sure yet" /> Not sure yet</label>
+                  </div>
+                </div>
+
+                <div class="step-nav">
+                  <button type="button" class="btn btn-outline" onclick="goToStep(1)">← Back</button>
+                  <span class="step-counter">Step 2 of 4</span>
+                  <button type="button" class="btn btn-primary" onclick="goToStep(3)">Next: Facility →</button>
+                </div>
+              </div>
+
+
+              <!-- ── STEP 3: Facility Details ── -->
+              <div class="step-panel" id="step-3">
+                <div class="step-header">
+                  <h3>🏢 Your Facility</h3>
+                  <p>Tell us about the property so we can tailor the quote accurately.</p>
+                </div>
+                <div class="form-grid">
+                  <div class="form-group full">
+                    <label for="q-address">Facility Address <span>*</span></label>
+                    <input type="text" id="q-address" name="facility_address" placeholder="123 Main St, Las Vegas, NV 89101" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="q-industry">Industry / Sector <span>*</span></label>
+                    <select id="q-industry" name="industry" required>
+                      <option value="" disabled selected>Select industry…</option>
+                      <option>Healthcare</option>
+                      <option>Education</option>
+                      <option>Corporate / Office</option>
+                      <option>Retail</option>
+                      <option>Government / Municipal</option>
+                      <option>Residential</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="q-size">Facility Size (sq ft)</label>
+                    <select id="q-size" name="facility_size">
+                      <option value="" disabled selected>Select size…</option>
+                      <option>Under 1,000 sq ft</option>
+                      <option>1,000 – 5,000 sq ft</option>
+                      <option>5,000 – 15,000 sq ft</option>
+                      <option>15,000 – 50,000 sq ft</option>
+                      <option>50,000+ sq ft</option>
+                      <option>Not sure</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="q-floors">Number of Floors</label>
+                    <select id="q-floors" name="floors">
+                      <option value="" disabled selected>Select…</option>
+                      <option>1 floor</option>
+                      <option>2 floors</option>
+                      <option>3–5 floors</option>
+                      <option>6–10 floors</option>
+                      <option>10+ floors</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="q-start">Preferred Start Date</label>
+                    <input type="date" id="q-start" name="start_date" />
+                  </div>
+                  <div class="form-group full">
+                    <label for="q-notes">Additional Notes</label>
+                    <textarea
+                      id="q-notes"
+                      name="additional_notes"
+                      placeholder="Any specific requirements, current pain points, access restrictions or anything else we should know about your facility…"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="step-nav">
+                  <button type="button" class="btn btn-outline" onclick="goToStep(2)">← Back</button>
+                  <span class="step-counter">Step 3 of 4</span>
+                  <button type="button" class="btn btn-primary" onclick="goToStep(4)">Review Quote →</button>
+                </div>
+              </div>
+
+
+              <!-- ── STEP 4: Review & Submit ── -->
+              <div class="step-panel" id="step-4">
+                <div class="step-header">
+                  <h3>✅ Review &amp; Submit</h3>
+                  <p>Check your details below then submit — we'll be in touch within one business day.</p>
+                </div>
+
+                <!-- Summary box -->
+                <div id="review-summary" style="
+                  background: var(--color-surface);
+                  border: 1px solid var(--color-border);
+                  border-radius: 0.875rem;
+                  padding: 1.5rem;
+                  margin-bottom: 1.5rem;
+                  display: grid;
+                  gap: 1rem;
+                  font-size: 0.875rem;
+                ">
+                  <div id="summary-contact"></div>
+                  <hr style="border:none;border-top:1px solid var(--color-border);" />
+                  <div id="summary-services"></div>
+                  <hr style="border:none;border-top:1px solid var(--color-border);" />
+                  <div id="summary-facility"></div>
+                </div>
+
+                <div class="form-group full" style="margin-bottom:1rem;">
+                  <label style="display:flex;align-items:flex-start;gap:0.6rem;cursor:pointer;font-weight:500;">
+                    <input type="checkbox" name="agree" required style="width:16px;height:16px;margin-top:2px;accent-color:var(--color-primary);flex-shrink:0;padding:0;border:none;background:none;" />
+                    I agree that Apex Facilities may contact me regarding this quote request. I understand this is completely free and no obligation.
+                  </label>
+                </div>
+
+                <div class="step-nav">
+                  <button type="button" class="btn btn-outline" onclick="goToStep(3)">← Back</button>
+                  <span class="step-counter">Step 4 of 4</span>
+                  <button type="submit" class="btn btn-cta">Submit Quote Request →</button>
+                </div>
+
+                <p style="font-size:0.75rem;color:var(--color-text-faint);margin-top:1rem;text-align:right;">
+                  🔒 Your information is secure and never shared with third parties.
+                </p>
+              </div>
+
+            </form>
+
+            <!-- Success state -->
+            <div class="quote-success" id="quote-success">
+              <div class="quote-success-icon">🎉</div>
+              <h3>Quote Request Received!</h3>
+              <p>
+                Thank you for reaching out to Apex Facilities. Our team
+                will review your request and get back to you within one
+                business day with a tailored proposal.
+              </p>
+              <a href="index.html" class="btn btn-primary">← Back to Home</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Apex Facilities" />
+            <span class="footer-logo-text">Apex Facilities</span>
+          </div>
+          <p>Professional facilities management in Las Vegas, NV. Janitorial, maintenance, floor care and more.</p>
+          <div style="display:grid;gap:0.5rem;margin-top:0.25rem;">
+            <div class="footer-contact-item">📍 4335 China Silk Ct, Las Vegas, NV 89129</div>
+            <div class="footer-contact-item">📞 <a href="tel:+17029695582">(702) 969-5582</a></div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Janitorial &amp; Cleaning</a></li>
+            <li><a href="services.html">Building Maintenance</a></li>
+            <li><a href="services.html">Floor Care</a></li>
+            <li><a href="services.html">Waste Management</a></li>
+            <li><a href="services.html">Office &amp; Commercial Cleaning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="industries.html">Healthcare</a></li>
+            <li><a href="industries.html">Education</a></li>
+            <li><a href="industries.html">Corporate Offices</a></li>
+            <li><a href="industries.html">Retail</a></li>
+            <li><a href="industries.html">Government</a></li>
+            <li><a href="industries.html">Residential</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Apex Facilities. All rights reserved. | Las Vegas, Nevada</p>
+        <p>Licensed · Insured · Bonded</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      /* ── MULTI-STEP FORM LOGIC ───────────────── */
+      var currentStep = 1;
+
+      function goToStep(n) {
+        /* Basic validation on step 1 before advancing */
+        if (n > currentStep && currentStep === 1) {
+          var first = document.getElementById('q-first');
+          var last  = document.getElementById('q-last');
+          var email = document.getElementById('q-email');
+          var phone = document.getElementById('q-phone');
+          if (!first.value.trim() || !last.value.trim() || !email.value.trim() || !phone.value.trim()) {
+            alert('Please fill in all required fields before continuing.');
+            return;
+          }
+        }
+        /* Validate step 3 address before advancing */
+        if (n > currentStep && currentStep === 3) {
+          var addr = document.getElementById('q-address');
+          var ind  = document.getElementById('q-industry');
+          if (!addr.value.trim() || !ind.value) {
+            alert('Please fill in the facility address and industry before continuing.');
+            return;
+          }
+        }
+
+        /* Hide all panels */
+        document.querySelectorAll('.step-panel').forEach(function(p) {
+          p.classList.remove('active');
+        });
+
+        /* Update progress indicators */
+        document.querySelectorAll('.step-item').forEach(function(item) {
+          var s = parseInt(item.dataset.step);
+          item.classList.remove('active', 'completed');
+          if (s === n) item.classList.add('active');
+          if (s < n)  item.classList.add('completed');
+        });
+
+        /* Show target panel */
+        document.getElementById('step-' + n).classList.add('active');
+        currentStep = n;
+
+        /* Build review summary on step 4 */
+        if (n === 4) buildReview();
+
+        /* Scroll form into view smoothly */
+        document.querySelector('.quote-form-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function buildReview() {
+        /* Contact */
+        var first   = document.getElementById('q-first').value;
+        var last    = document.getElementById('q-last').value;
+        var email   = document.getElementById('q-email').value;
+        var phone   = document.getElementById('q-phone').value;
+        var company = document.getElementById('q-company').value;
+        var role    = document.getElementById('q-role').value;
+
+        var contactHtml = '<strong style="color:var(--color-primary);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;">Contact Details</strong><div style="margin-top:0.5rem;display:grid;gap:0.3rem;">';
+        contactHtml += '<span>👤 ' + first + ' ' + last + (role ? ' — ' + role : '') + '</span>';
+        contactHtml += '<span>📧 ' + email + '</span>';
+        contactHtml += '<span>📞 ' + phone + '</span>';
+        if (company) contactHtml += '<span>🏢 ' + company + '</span>';
+        contactHtml += '</div>';
+        document.getElementById('summary-contact').innerHTML = contactHtml;
+
+        /* Services */
+        var checked = Array.from(document.querySelectorAll('input[name="services[]"]:checked')).map(function(c){ return c.value; });
+        var freq    = document.querySelector('input[name="frequency"]:checked');
+        var svcHtml = '<strong style="color:var(--color-primary);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;">Services &amp; Frequency</strong><div style="margin-top:0.5rem;display:grid;gap:0.3rem;">';
+        svcHtml += '<span>🧹 ' + (checked.length ? checked.join(', ') : 'None selected') + '</span>';
+        svcHtml += '<span>📅 Frequency: ' + (freq ? freq.value : 'Not specified') + '</span>';
+        svcHtml += '</div>';
+        document.getElementById('summary-services').innerHTML = svcHtml;
+
+        /* Facility */
+        var addr    = document.getElementById('q-address').value;
+        var ind     = document.getElementById('q-industry').value;
+        var size    = document.getElementById('q-size').value;
+        var floors  = document.getElementById('q-floors').value;
+        var start   = document.getElementById('q-start').value;
+        var notes   = document.getElementById('q-notes').value;
+        var facHtml = '<strong style="color:var(--color-primary);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;">Facility Details</strong><div style="margin-top:0.5rem;display:grid;gap:0.3rem;">';
+        facHtml += '<span>📍 ' + addr + '</span>';
+        facHtml += '<span>🏭 Industry: ' + (ind || 'Not specified') + '</span>';
+        if (size)   facHtml += '<span>📐 Size: ' + size + '</span>';
+        if (floors) facHtml += '<span>🏢 Floors: ' + floors + '</span>';
+        if (start)  facHtml += '<span>📅 Start date: ' + start + '</span>';
+        if (notes)  facHtml += '<span>📝 Notes: ' + notes + '</span>';
+        facHtml += '</div>';
+        document.getElementById('summary-facility').innerHTML = facHtml;
+      }
+
+      /* Show success state if redirected back after FormSubmit */
+      (function () {
+        if (window.location.search.includes('sent=true')) {
+          var form    = document.getElementById('quote-form');
+          var prog    = document.getElementById('step-progress');
+          var success = document.getElementById('quote-success');
+          if (form && success) {
+            form.style.display    = 'none';
+            prog.style.display    = 'none';
+            success.style.display = 'block';
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

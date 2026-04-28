@@ -1,0 +1,1254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industries We Serve | Apex Facilities — Las Vegas, NV</title>
+    <meta
+      name="description"
+      content="Apex Facilities serves healthcare, education, corporate, retail, government and residential sectors across Las Vegas and Nevada with professional facilities management."
+    />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* ── PAGE HERO ────────────────────────────── */
+      .page-hero {
+        background: var(--color-primary);
+        padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 7vw, 5rem);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 80% at 5% 60%,
+            rgba(45, 140, 202, 0.14) 0%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 50% 60% at 95% 10%,
+            rgba(255, 255, 255, 0.03) 0%,
+            transparent 55%
+          );
+        pointer-events: none;
+      }
+
+      .page-hero .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent-light);
+        background: rgba(45, 140, 202, 0.15);
+        border: 1px solid rgba(45, 140, 202, 0.3);
+        padding: 0.35rem 0.9rem;
+        border-radius: 9999px;
+        margin-bottom: 1.25rem;
+      }
+
+      .page-hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4.5vw, 3.25rem);
+        color: #fff;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.25rem;
+      }
+
+      .page-hero h1 em {
+        font-style: normal;
+        color: var(--color-accent-light);
+      }
+
+      .page-hero-desc {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.82;
+        max-width: 54ch;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+      }
+
+      .page-hero-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      /* ── INDUSTRY DETAIL SECTIONS ─────────────── */
+      .industry-detail {
+        padding: clamp(3.5rem, 8vw, 6rem) 0;
+        position: relative;
+      }
+
+      .industry-detail:nth-child(even) {
+        background: var(--color-surface);
+      }
+
+      .industry-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(2.5rem, 6vw, 5rem);
+        align-items: center;
+      }
+
+      .industry-detail:nth-child(even) .industry-detail-grid {
+        direction: rtl;
+      }
+
+      .industry-detail:nth-child(even) .industry-detail-content,
+      .industry-detail:nth-child(even) .industry-img-wrap {
+        direction: ltr;
+      }
+
+      .industry-img-wrap {
+        border-radius: 1.25rem;
+        overflow: hidden;
+        box-shadow: 0 16px 48px rgba(26, 79, 138, 0.14);
+        position: relative;
+      }
+
+      .industry-img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.55s ease;
+      }
+
+      .industry-img-wrap:hover .industry-img {
+        transform: scale(1.03);
+      }
+
+      /* Industry icon badge on image */
+      .industry-img-badge {
+        position: absolute;
+        top: 1.25rem;
+        left: 1.25rem;
+        background: var(--color-primary);
+        color: #fff;
+        width: 56px;
+        height: 56px;
+        border-radius: 1rem;
+        display: grid;
+        place-items: center;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 16px rgba(26, 79, 138, 0.35);
+      }
+
+      .industry-detail-content {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .industry-detail-content h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        color: var(--color-primary);
+        line-height: 1.18;
+      }
+
+      .industry-detail-content p {
+        font-size: 0.9375rem;
+        color: var(--color-text-muted);
+        line-height: 1.82;
+      }
+
+      /* Services tags for each industry */
+      .industry-services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.25rem;
+      }
+
+      .industry-tag {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        background: rgba(26, 79, 138, 0.07);
+        border: 1px solid rgba(26, 79, 138, 0.15);
+        padding: 0.35rem 0.8rem;
+        border-radius: 9999px;
+        white-space: nowrap;
+      }
+
+      /* Feature checklist */
+      .feature-list {
+        display: grid;
+        gap: 0.6rem;
+      }
+
+      .feature-list li {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        line-height: 1.5;
+      }
+
+      .feature-list li .chk {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(14, 124, 58, 0.1);
+        color: var(--color-cta);
+        font-size: 0.7rem;
+        font-weight: 800;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+
+      /* ── SHARED LABEL ─────────────────────────── */
+      .section-label {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        background: rgba(45, 140, 202, 0.1);
+        border: 1px solid rgba(45, 140, 202, 0.22);
+        padding: 0.3rem 0.8rem;
+        border-radius: 9999px;
+        margin-bottom: 1rem;
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 640px;
+        margin-inline: auto;
+        margin-bottom: clamp(2rem, 5vw, 3rem);
+      }
+
+      .section-header .section-label {
+        display: block;
+      }
+
+      .section-header h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+      }
+
+      .section-header p {
+        font-size: 1rem;
+        color: var(--color-text-muted);
+        max-width: 52ch;
+        margin-inline: auto;
+        line-height: 1.78;
+      }
+
+      .section {
+        padding: clamp(3rem, 7vw, 5rem) 0;
+      }
+      .alt-section {
+        background: var(--color-surface);
+      }
+      .section-cta {
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      /* ── ALL INDUSTRIES OVERVIEW CARDS ───────── */
+      .industries-overview-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.1rem;
+      }
+
+      .ind-overview-card {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 1.75rem 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        text-decoration: none;
+        transition:
+          box-shadow 0.22s ease,
+          transform 0.22s ease,
+          border-color 0.22s ease;
+      }
+
+      .ind-overview-card:hover {
+        box-shadow: 0 8px 28px rgba(26, 79, 138, 0.12);
+        transform: translateY(-3px);
+        border-color: rgba(45, 140, 202, 0.3);
+      }
+
+      .ind-overview-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 0.875rem;
+        background: rgba(26, 79, 138, 0.07);
+        display: grid;
+        place-items: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+
+      .ind-overview-text h3 {
+        font-family: var(--font-display);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 0.3rem;
+      }
+
+      .ind-overview-text p {
+        font-size: 0.8rem;
+        color: var(--color-text-muted);
+        line-height: 1.55;
+      }
+
+      .ind-overview-text span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--color-accent);
+        margin-top: 0.5rem;
+      }
+
+      /* ── STATS STRIP ──────────────────────────── */
+      .stats-strip {
+        background: var(--color-primary);
+        padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+      }
+
+      .stats-strip-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+      }
+
+      .stats-strip-card {
+        text-align: center;
+        padding: 1.75rem 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        transition: background 0.2s ease;
+      }
+
+      .stats-strip-card:hover {
+        background: rgba(255, 255, 255, 0.09);
+      }
+
+      .stats-strip-card h3 {
+        font-family: var(--font-display);
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+        font-weight: 800;
+        color: var(--color-accent-light);
+        margin-bottom: 0.4rem;
+      }
+
+      .stats-strip-card p {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.55;
+      }
+
+      /* ── CTA ──────────────────────────────────── */
+      .cta-section {
+        padding: clamp(3rem, 7vw, 5rem) 0;
+        background: var(--color-surface);
+      }
+
+      .cta-box {
+        background: var(--color-primary);
+        border-radius: 1.5rem;
+        padding: clamp(2.5rem, 6vw, 4rem);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 55% 80% at 50% 120%,
+          rgba(45, 140, 202, 0.2) 0%,
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+
+      .cta-box > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-box .section-label {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.9);
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      .cta-box h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3vw, 2.25rem);
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+
+      .cta-box p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.68);
+        max-width: 52ch;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+        line-height: 1.78;
+      }
+
+      .cta-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      /* ── FOOTER ───────────────────────────────── */
+      .footer {
+        background: var(--color-primary-deeper);
+        padding-top: clamp(3rem, 6vw, 5rem);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.65fr repeat(3, 1fr);
+        gap: clamp(1.5rem, 4vw, 3rem);
+        padding-bottom: clamp(2.5rem, 5vw, 4rem);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-brand {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .footer-logo img {
+        height: 36px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      .footer-logo-text {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #fff;
+      }
+
+      .footer-brand p {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.48);
+        line-height: 1.78;
+        max-width: 34ch;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.5;
+      }
+
+      .footer-contact-item a {
+        color: var(--color-accent-light);
+        transition: color 0.2s ease;
+      }
+
+      .footer-contact-item a:hover {
+        color: #fff;
+      }
+
+      .footer-col {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .footer-col h4 {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .footer-col ul {
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .footer-col li,
+      .footer-col a {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.48);
+        transition: color 0.2s ease;
+        line-height: 1.5;
+        text-decoration: none;
+      }
+
+      .footer-col a:hover {
+        color: var(--color-accent-light);
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding-block: 1.5rem;
+      }
+
+      .footer-bottom p {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      /* ── RESPONSIVE ───────────────────────────── */
+      @media (max-width: 1024px) {
+        .industries-overview-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .stats-strip-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-brand {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .industry-detail-grid {
+          grid-template-columns: 1fr;
+        }
+        .industry-detail:nth-child(even) .industry-detail-grid {
+          direction: ltr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .industries-overview-grid {
+          grid-template-columns: 1fr;
+        }
+        .stats-strip-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-brand {
+          grid-column: auto;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .cta-btns {
+          flex-direction: column;
+          align-items: center;
+        }
+        .cta-btns .btn {
+          width: 100%;
+          max-width: 320px;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-text">Apex Facilities</span>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html" class="active">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="quote.html" class="btn btn-cta nav-cta">Request a Quote</a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════
+         PAGE HERO
+         ═══════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="page-hero-eyebrow">🏭 Sectors We Serve</span>
+        <h1>Facilities Management Across<br /><em>Every Industry</em></h1>
+        <p class="page-hero-desc">
+          Apex Facilities brings professional, tailored facilities management to
+          clients across six key industries in Las Vegas and Nevada — each with
+          its own standards, requirements and expectations.
+        </p>
+        <div class="page-hero-btns">
+          <a href="quote.html" class="btn btn-cta">Get a Free Quote →</a>
+          <a href="contact.html" class="btn btn-outline-light">Talk to Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         INDUSTRIES OVERVIEW CARDS
+         ═══════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">All Industries</span>
+          <h2>Six Sectors. One Trusted Partner.</h2>
+          <p>
+            Whether you manage a medical clinic, a school, a retail chain or a
+            residential complex — Apex Facilities has the expertise and
+            experience to serve you professionally.
+          </p>
+        </div>
+        <div class="industries-overview-grid">
+          <a href="#healthcare" class="ind-overview-card">
+            <div class="ind-overview-icon">🏥</div>
+            <div class="ind-overview-text">
+              <h3>Healthcare</h3>
+              <p>Clinics, medical offices &amp; healthcare facilities</p>
+              <span>Learn more →</span>
+            </div>
+          </a>
+
+          <a href="#education" class="ind-overview-card">
+            <div class="ind-overview-icon">🎓</div>
+            <div class="ind-overview-text">
+              <h3>Education</h3>
+              <p>Schools, colleges &amp; training centres</p>
+              <span>Learn more →</span>
+            </div>
+          </a>
+
+          <a href="#corporate" class="ind-overview-card">
+            <div class="ind-overview-icon">🏢</div>
+            <div class="ind-overview-text">
+              <h3>Corporate Offices</h3>
+              <p>Office buildings, co-working &amp; business parks</p>
+              <span>Learn more →</span>
+            </div>
+          </a>
+
+          <a href="#retail" class="ind-overview-card">
+            <div class="ind-overview-icon">🛍️</div>
+            <div class="ind-overview-text">
+              <h3>Retail</h3>
+              <p>Shops, shopping centres &amp; showrooms</p>
+              <span>Learn more →</span>
+            </div>
+          </a>
+
+          <a href="#government" class="ind-overview-card">
+            <div class="ind-overview-icon">🏛️</div>
+            <div class="ind-overview-text">
+              <h3>Government</h3>
+              <p>Municipal buildings &amp; government facilities</p>
+              <span>Learn more →</span>
+            </div>
+          </a>
+
+          <a href="#residential" class="ind-overview-card">
+            <div class="ind-overview-icon">🏠</div>
+            <div class="ind-overview-text">
+              <h3>Residential</h3>
+              <p>Apartment complexes &amp; residential properties</p>
+              <span>Learn more →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         INDUSTRY 1 — HEALTHCARE
+         ═══════════════════════════════════ -->
+    <section class="industry-detail" id="healthcare">
+      <div class="container">
+        <div class="industry-detail-grid">
+          <div class="industry-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80&fit=crop"
+              alt="Healthcare facility cleaning and maintenance"
+              class="industry-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="industry-img-badge">🏥</div>
+          </div>
+
+          <div class="industry-detail-content">
+            <span class="section-label">Industry 01</span>
+            <h2>Healthcare Facilities</h2>
+            <p>
+              Cleanliness and hygiene are non-negotiable in healthcare settings.
+              Apex Facilities delivers infection-control-focused cleaning and
+              maintenance programmes for medical offices, clinics, dental
+              practices and healthcare buildings across Las Vegas.
+            </p>
+            <p>
+              Our healthcare cleaning teams are trained in proper sanitation
+              protocols, cross-contamination prevention and the safe use of
+              medical-grade disinfectants — keeping your facility safe for
+              patients, staff and visitors at all times.
+            </p>
+            <div class="industry-services">
+              <span class="industry-tag">🧹 Janitorial &amp; Cleaning</span>
+              <span class="industry-tag">🔧 Building Maintenance</span>
+              <span class="industry-tag">✨ Floor Care</span>
+              <span class="industry-tag">♻️ Waste Management</span>
+            </div>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Infection-control cleaning protocols
+              </li>
+              <li>
+                <span class="chk">✓</span> Medical-grade disinfectants &amp;
+                sanitisers
+              </li>
+              <li>
+                <span class="chk">✓</span> Waiting room &amp; patient area
+                cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Restroom sanitation to healthcare
+                standards
+              </li>
+              <li>
+                <span class="chk">✓</span> Medical waste disposal coordination
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Healthcare Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         INDUSTRY 2 — EDUCATION
+         ═══════════════════════════════════ -->
+    <section class="industry-detail" id="education">
+      <div class="container">
+        <div class="industry-detail-grid">
+          <div class="industry-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80&fit=crop"
+              alt="School and education facility cleaning"
+              class="industry-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="industry-img-badge">🎓</div>
+          </div>
+
+          <div class="industry-detail-content">
+            <span class="section-label">Industry 02</span>
+            <h2>Education Facilities</h2>
+            <p>
+              Schools, colleges and training centres require consistent,
+              thorough cleaning that keeps students and staff healthy while
+              maintaining a safe learning environment every day of the academic
+              year.
+            </p>
+            <p>
+              Apex Facilities works around school schedules — cleaning outside
+              of teaching hours to minimise disruption. From classrooms and
+              cafeterias to gymnasiums and restrooms, we keep every area of your
+              educational facility clean and well-maintained.
+            </p>
+            <div class="industry-services">
+              <span class="industry-tag">🧹 Janitorial &amp; Cleaning</span>
+              <span class="industry-tag">✨ Floor Care</span>
+              <span class="industry-tag">♻️ Waste Management</span>
+              <span class="industry-tag">🏢 Commercial Cleaning</span>
+            </div>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Classroom &amp; hallway cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Cafeteria &amp; kitchen sanitation
+              </li>
+              <li>
+                <span class="chk">✓</span> Gym &amp; sports facility cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> After-hours &amp; weekend scheduling
+              </li>
+              <li>
+                <span class="chk">✓</span> Seasonal deep cleaning programmes
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get an Education Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         INDUSTRY 3 — CORPORATE
+         ═══════════════════════════════════ -->
+    <section class="industry-detail" id="corporate">
+      <div class="container">
+        <div class="industry-detail-grid">
+          <div class="industry-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&fit=crop"
+              alt="Corporate office cleaning and facilities management"
+              class="industry-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="industry-img-badge">🏢</div>
+          </div>
+
+          <div class="industry-detail-content">
+            <span class="section-label">Industry 03</span>
+            <h2>Corporate Offices</h2>
+            <p>
+              A clean, well-maintained office reflects your company's
+              professionalism and creates a productive environment for your
+              team. Apex Facilities provides comprehensive cleaning and
+              maintenance programmes for offices of all sizes — from small
+              suites to large multi-floor buildings.
+            </p>
+            <p>
+              We schedule around your business hours and provide dedicated
+              account management so you always have a point of contact who knows
+              your facility inside and out.
+            </p>
+            <div class="industry-services">
+              <span class="industry-tag">🧹 Janitorial &amp; Cleaning</span>
+              <span class="industry-tag">🔧 Building Maintenance</span>
+              <span class="industry-tag">✨ Floor Care</span>
+              <span class="industry-tag">🏢 Commercial Cleaning</span>
+            </div>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Workstation &amp; desk cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Reception &amp; lobby presentation
+              </li>
+              <li>
+                <span class="chk">✓</span> Conference room &amp; boardroom
+                cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Kitchen &amp; break room sanitation
+              </li>
+              <li>
+                <span class="chk">✓</span> Dedicated account manager assigned
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Corporate Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         INDUSTRY 4 — RETAIL
+         ═══════════════════════════════════ -->
+    <section class="industry-detail" id="retail">
+      <div class="container">
+        <div class="industry-detail-grid">
+          <div class="industry-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80&fit=crop"
+              alt="Retail store cleaning and facilities management"
+              class="industry-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="industry-img-badge">🛍️</div>
+          </div>
+
+          <div class="industry-detail-content">
+            <span class="section-label">Industry 04</span>
+            <h2>Retail Spaces</h2>
+            <p>
+              In retail, presentation is everything. A clean, well-presented
+              store environment encourages customers to stay longer, shop more
+              and come back. Apex Facilities keeps your retail space spotless —
+              before opening, after closing or both.
+            </p>
+            <p>
+              We serve retail stores, shopping centres, showrooms and boutiques
+              across Las Vegas — delivering cleaning and maintenance programmes
+              that fit your trading hours and foot-traffic levels.
+            </p>
+            <div class="industry-services">
+              <span class="industry-tag">🧹 Janitorial &amp; Cleaning</span>
+              <span class="industry-tag">✨ Floor Care</span>
+              <span class="industry-tag">♻️ Waste Management</span>
+              <span class="industry-tag">🏢 Commercial Cleaning</span>
+            </div>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Shop floor &amp; display area
+                cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Fitting room &amp; changing area
+                sanitation
+              </li>
+              <li>
+                <span class="chk">✓</span> High-traffic entrance &amp; window
+                cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Before-open &amp; after-close
+                scheduling
+              </li>
+              <li>
+                <span class="chk">✓</span> Floor care &amp; polishing for
+                high-foot areas
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Retail Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         INDUSTRY 5 — GOVERNMENT
+         ═══════════════════════════════════ -->
+    <section class="industry-detail" id="government">
+      <div class="container">
+        <div class="industry-detail-grid">
+          <div class="industry-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80&fit=crop"
+              alt="Government building facilities management"
+              class="industry-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="industry-img-badge">🏛️</div>
+          </div>
+
+          <div class="industry-detail-content">
+            <span class="section-label">Industry 05</span>
+            <h2>Government &amp; Municipal Buildings</h2>
+            <p>
+              Government facilities demand the highest standards of cleanliness,
+              security and compliance. Apex Facilities has the experience and
+              credentials to deliver facilities management services that meet
+              government and municipal requirements.
+            </p>
+            <p>
+              Our staff are background-checked, bonded and trained in the
+              security protocols required for sensitive public buildings —
+              ensuring your facility is maintained to the highest standards at
+              all times.
+            </p>
+            <div class="industry-services">
+              <span class="industry-tag">🧹 Janitorial &amp; Cleaning</span>
+              <span class="industry-tag">🔧 Building Maintenance</span>
+              <span class="industry-tag">✨ Floor Care</span>
+              <span class="industry-tag">♻️ Waste Management</span>
+            </div>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Security-cleared, background-checked
+                staff
+              </li>
+              <li>
+                <span class="chk">✓</span> Compliance-focused cleaning protocols
+              </li>
+              <li>
+                <span class="chk">✓</span> Public-facing area presentation
+                standards
+              </li>
+              <li>
+                <span class="chk">✓</span> Scheduled &amp; emergency maintenance
+              </li>
+              <li>
+                <span class="chk">✓</span> Full documentation &amp; service
+                reporting
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Government Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         INDUSTRY 6 — RESIDENTIAL
+         ═══════════════════════════════════ -->
+    <section class="industry-detail" id="residential">
+      <div class="container">
+        <div class="industry-detail-grid">
+          <div class="industry-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80&fit=crop"
+              alt="Residential property facilities management"
+              class="industry-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="industry-img-badge">🏠</div>
+          </div>
+
+          <div class="industry-detail-content">
+            <span class="section-label">Industry 06</span>
+            <h2>Residential Properties</h2>
+            <p>
+              Apartment complexes, condominiums and residential communities
+              require ongoing maintenance and cleaning to keep common areas
+              presentable, safe and well-maintained for residents. Apex
+              Facilities delivers exactly that — reliably and professionally.
+            </p>
+            <p>
+              We work with property managers and HOAs across Las Vegas to
+              provide scheduled cleaning, maintenance and waste management
+              services that keep residential communities in excellent condition.
+            </p>
+            <div class="industry-services">
+              <span class="industry-tag">🧹 Janitorial &amp; Cleaning</span>
+              <span class="industry-tag">🔧 Building Maintenance</span>
+              <span class="industry-tag">✨ Floor Care</span>
+              <span class="industry-tag">♻️ Waste Management</span>
+            </div>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Lobby &amp; common area cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Corridor &amp; stairwell maintenance
+              </li>
+              <li>
+                <span class="chk">✓</span> Laundry room &amp; amenity area
+                cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Parking lot &amp; exterior
+                maintenance
+              </li>
+              <li>
+                <span class="chk">✓</span> Waste station cleaning &amp;
+                management
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Residential Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         STATS STRIP
+         ═══════════════════════════════════ -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-strip-grid">
+          <div class="stats-strip-card">
+            <h3>6</h3>
+            <p>Industries served across Las Vegas &amp; Nevada</p>
+          </div>
+          <div class="stats-strip-card">
+            <h3>500+</h3>
+            <p>Clients across all sectors</p>
+          </div>
+          <div class="stats-strip-card">
+            <h3>15+</h3>
+            <p>Years of multi-sector experience</p>
+          </div>
+          <div class="stats-strip-card">
+            <h3>100%</h3>
+            <p>Licensed, insured &amp; bonded on every job</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         CTA
+         ═══════════════════════════════════ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="section-label">Work With Us</span>
+          <h2>Request a Free Industry-Specific Quote</h2>
+          <p>
+            Tell us your industry, facility type and service needs — we'll put
+            together a tailored, no-obligation quote within one business day.
+          </p>
+          <div class="cta-btns">
+            <a href="quote.html" class="btn btn-cta">Get a Free Quote →</a>
+            <a href="tel:+17029695582" class="btn btn-outline-light"
+              >📞 (702) 969-5582</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Apex Facilities" />
+            <span class="footer-logo-text">Apex Facilities</span>
+          </div>
+          <p>
+            Professional facilities management in Las Vegas, NV. Janitorial,
+            maintenance, floor care and more.
+          </p>
+          <div style="display: grid; gap: 0.5rem; margin-top: 0.25rem">
+            <div class="footer-contact-item">
+              📍 4335 China Silk Ct, Las Vegas, NV 89129
+            </div>
+            <div class="footer-contact-item">
+              📞 <a href="tel:+17029695582">(702) 969-5582</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Janitorial &amp; Cleaning</a></li>
+            <li><a href="services.html">Building Maintenance</a></li>
+            <li><a href="services.html">Floor Care</a></li>
+            <li><a href="services.html">Waste Management</a></li>
+            <li>
+              <a href="services.html">Office &amp; Commercial Cleaning</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="#healthcare">Healthcare</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#corporate">Corporate Offices</a></li>
+            <li><a href="#retail">Retail</a></li>
+            <li><a href="#government">Government</a></li>
+            <li><a href="#residential">Residential</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Apex Facilities. All rights reserved. | Las Vegas, Nevada</p>
+        <p>Licensed · Insured · Bonded</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

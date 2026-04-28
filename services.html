@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services | Apex Facilities — Las Vegas, NV</title>
+    <meta
+      name="description"
+      content="Apex Facilities offers janitorial & cleaning, building maintenance, floor care, waste management and office & commercial cleaning services in Las Vegas, NV."
+    />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* ── PAGE HERO ────────────────────────────── */
+      .page-hero {
+        background: var(--color-primary);
+        padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 7vw, 5rem);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 80% at 5% 60%,
+            rgba(45, 140, 202, 0.14) 0%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 50% 60% at 95% 10%,
+            rgba(255, 255, 255, 0.03) 0%,
+            transparent 55%
+          );
+        pointer-events: none;
+      }
+
+      .page-hero .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent-light);
+        background: rgba(45, 140, 202, 0.15);
+        border: 1px solid rgba(45, 140, 202, 0.3);
+        padding: 0.35rem 0.9rem;
+        border-radius: 9999px;
+        margin-bottom: 1.25rem;
+      }
+
+      .page-hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4.5vw, 3.25rem);
+        color: #fff;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.25rem;
+      }
+
+      .page-hero h1 em {
+        font-style: normal;
+        color: var(--color-accent-light);
+      }
+
+      .page-hero-desc {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.82;
+        max-width: 54ch;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+      }
+
+      .page-hero-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      /* ── SERVICE DETAIL CARDS ─────────────────── */
+      .service-detail {
+        padding: clamp(3.5rem, 8vw, 6rem) 0;
+        position: relative;
+      }
+
+      .service-detail:nth-child(even) {
+        background: var(--color-surface);
+      }
+
+      .service-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(2.5rem, 6vw, 5rem);
+        align-items: center;
+      }
+
+      .service-detail:nth-child(even) .service-detail-grid {
+        direction: rtl;
+      }
+
+      .service-detail:nth-child(even) .service-detail-content,
+      .service-detail:nth-child(even) .service-detail-img-wrap {
+        direction: ltr;
+      }
+
+      .service-detail-img-wrap {
+        border-radius: 1.25rem;
+        overflow: hidden;
+        box-shadow: 0 16px 48px rgba(26, 79, 138, 0.14);
+        position: relative;
+      }
+
+      .service-detail-img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.55s ease;
+      }
+
+      .service-detail-img-wrap:hover .service-detail-img {
+        transform: scale(1.03);
+      }
+
+      /* Service number badge on image */
+      .service-num-badge {
+        position: absolute;
+        top: 1.25rem;
+        left: 1.25rem;
+        background: var(--color-primary);
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 800;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 4px 16px rgba(26, 79, 138, 0.35);
+      }
+
+      .service-detail-content {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .service-detail-icon {
+        font-size: 2.5rem;
+        line-height: 1;
+        width: 64px;
+        height: 64px;
+        border-radius: 1rem;
+        background: rgba(26, 79, 138, 0.08);
+        display: grid;
+        place-items: center;
+      }
+
+      .service-detail-content h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        color: var(--color-primary);
+        line-height: 1.18;
+      }
+
+      .service-detail-content p {
+        font-size: 0.9375rem;
+        color: var(--color-text-muted);
+        line-height: 1.82;
+      }
+
+      /* Feature list */
+      .feature-list {
+        display: grid;
+        gap: 0.6rem;
+      }
+
+      .feature-list li {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        line-height: 1.5;
+      }
+
+      .feature-list li .chk {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(14, 124, 58, 0.1);
+        color: var(--color-cta);
+        font-size: 0.7rem;
+        font-weight: 800;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+
+      /* ── ALL SERVICES QUICK NAV ───────────────── */
+      .services-nav {
+        background: #fff;
+        border-bottom: 1px solid var(--color-border);
+        position: sticky;
+        top: 72px;
+        z-index: 50;
+      }
+
+      .services-nav-inner {
+        display: flex;
+        gap: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .services-nav-inner::-webkit-scrollbar {
+        display: none;
+      }
+
+      .svc-nav-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--color-text-muted);
+        padding: 1rem 1.25rem;
+        white-space: nowrap;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition:
+          color 0.2s ease,
+          border-color 0.2s ease;
+        flex-shrink: 0;
+      }
+
+      .svc-nav-link:hover,
+      .svc-nav-link.active {
+        color: var(--color-primary);
+        border-bottom-color: var(--color-primary);
+      }
+
+      /* ── SHARED LABEL ─────────────────────────── */
+      .section-label {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        background: rgba(45, 140, 202, 0.1);
+        border: 1px solid rgba(45, 140, 202, 0.22);
+        padding: 0.3rem 0.8rem;
+        border-radius: 9999px;
+        margin-bottom: 1rem;
+      }
+
+      /* ── WHY STRIP ────────────────────────────── */
+      .why-strip {
+        background: var(--color-primary);
+        padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+      }
+
+      .why-strip-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+      }
+
+      .why-strip-card {
+        text-align: center;
+        padding: 1.75rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        display: grid;
+        gap: 0.6rem;
+        justify-items: center;
+        transition: background 0.2s ease;
+      }
+
+      .why-strip-card:hover {
+        background: rgba(255, 255, 255, 0.09);
+      }
+
+      .why-strip-card .icon {
+        font-size: 1.75rem;
+        line-height: 1;
+      }
+
+      .why-strip-card h4 {
+        font-family: var(--font-display);
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .why-strip-card p {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.55;
+      }
+
+      /* ── CTA ──────────────────────────────────── */
+      .cta-section {
+        padding: clamp(3rem, 7vw, 5rem) 0;
+        background: var(--color-surface);
+      }
+
+      .cta-box {
+        background: var(--color-primary);
+        border-radius: 1.5rem;
+        padding: clamp(2.5rem, 6vw, 4rem);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 55% 80% at 50% 120%,
+          rgba(45, 140, 202, 0.2) 0%,
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+
+      .cta-box > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-box .section-label {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.9);
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      .cta-box h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3vw, 2.25rem);
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+
+      .cta-box p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.68);
+        max-width: 52ch;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+        line-height: 1.78;
+      }
+
+      .cta-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      /* ── FOOTER ───────────────────────────────── */
+      .footer {
+        background: var(--color-primary-deeper);
+        padding-top: clamp(3rem, 6vw, 5rem);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.65fr repeat(3, 1fr);
+        gap: clamp(1.5rem, 4vw, 3rem);
+        padding-bottom: clamp(2.5rem, 5vw, 4rem);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-brand {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .footer-logo img {
+        height: 36px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      .footer-logo-text {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #fff;
+      }
+
+      .footer-brand p {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.48);
+        line-height: 1.78;
+        max-width: 34ch;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.5;
+      }
+
+      .footer-contact-item a {
+        color: var(--color-accent-light);
+        transition: color 0.2s ease;
+      }
+
+      .footer-contact-item a:hover {
+        color: #fff;
+      }
+
+      .footer-col {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .footer-col h4 {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .footer-col ul {
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .footer-col li,
+      .footer-col a {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.48);
+        transition: color 0.2s ease;
+        line-height: 1.5;
+        text-decoration: none;
+      }
+
+      .footer-col a:hover {
+        color: var(--color-accent-light);
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding-block: 1.5rem;
+      }
+
+      .footer-bottom p {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      /* ── RESPONSIVE ───────────────────────────── */
+      @media (max-width: 1024px) {
+        .why-strip-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-brand {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .service-detail-grid {
+          grid-template-columns: 1fr;
+        }
+        .service-detail:nth-child(even) .service-detail-grid {
+          direction: ltr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .why-strip-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-brand {
+          grid-column: auto;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .cta-btns {
+          flex-direction: column;
+          align-items: center;
+        }
+        .cta-btns .btn {
+          width: 100%;
+          max-width: 320px;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-text">Apex Facilities</span>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="quote.html" class="btn btn-cta nav-cta">Request a Quote</a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════
+         PAGE HERO
+         ═══════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="page-hero-eyebrow">🧹 What We Offer</span>
+        <h1>Professional Facilities<br /><em>Management Services</em></h1>
+        <p class="page-hero-desc">
+          From daily janitorial services to full building maintenance — Apex
+          Facilities delivers tailored, professional facility solutions for
+          commercial and residential clients across Las Vegas, NV.
+        </p>
+        <div class="page-hero-btns">
+          <a href="quote.html" class="btn btn-cta">Get a Free Quote →</a>
+          <a href="contact.html" class="btn btn-outline-light">Talk to Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         QUICK NAV
+         ═══════════════════════════════════ -->
+    <nav class="services-nav" aria-label="Services navigation">
+      <div class="container">
+        <div class="services-nav-inner">
+          <a href="#janitorial" class="svc-nav-link"
+            >🧹 Janitorial &amp; Cleaning</a
+          >
+          <a href="#maintenance" class="svc-nav-link"
+            >🔧 Building Maintenance</a
+          >
+          <a href="#floor-care" class="svc-nav-link">✨ Floor Care</a>
+          <a href="#waste" class="svc-nav-link">♻️ Waste Management</a>
+          <a href="#commercial" class="svc-nav-link">🏢 Commercial Cleaning</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════
+         SERVICE 1 — JANITORIAL
+         ═══════════════════════════════════ -->
+    <section class="service-detail" id="janitorial">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80&fit=crop"
+              alt="Professional janitorial and cleaning services"
+              class="service-detail-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="service-num-badge">01</div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="service-detail-icon">🧹</div>
+            <span class="section-label">Service 01</span>
+            <h2>Janitorial &amp; Cleaning Services</h2>
+            <p>
+              Our janitorial services provide consistent, thorough cleaning for
+              offices, commercial buildings and residential properties. We work
+              around your schedule — daily, weekly or customised frequencies —
+              to keep your space spotless at all times.
+            </p>
+            <p>
+              Every clean is performed by trained, uniformed staff using
+              professional-grade, eco-friendly products that are safe for your
+              staff, tenants and clients.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Daily, weekly or custom cleaning
+                schedules
+              </li>
+              <li>
+                <span class="chk">✓</span> Restroom sanitation &amp; restocking
+              </li>
+              <li><span class="chk">✓</span> Common area and lobby cleaning</li>
+              <li>
+                <span class="chk">✓</span> Kitchen &amp; break room cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Dusting, vacuuming &amp; surface
+                disinfection
+              </li>
+              <li>
+                <span class="chk">✓</span> Eco-friendly, low-VOC cleaning
+                products
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         SERVICE 2 — BUILDING MAINTENANCE
+         ═══════════════════════════════════ -->
+    <section class="service-detail" id="maintenance">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&fit=crop"
+              alt="Building maintenance technician at work"
+              class="service-detail-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="service-num-badge">02</div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="service-detail-icon">🔧</div>
+            <span class="section-label">Service 02</span>
+            <h2>Building Maintenance</h2>
+            <p>
+              Keeping your building in top condition requires more than
+              cleaning. Our building maintenance service covers preventive
+              upkeep, reactive repairs and routine inspections to ensure your
+              facility runs smoothly and safely year-round.
+            </p>
+            <p>
+              We work with commercial property managers, building owners and
+              residential complexes to provide reliable, cost-effective
+              maintenance programmes tailored to each property.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Preventive &amp; scheduled
+                maintenance programmes
+              </li>
+              <li>
+                <span class="chk">✓</span> Plumbing, electrical &amp; HVAC minor
+                repairs
+              </li>
+              <li>
+                <span class="chk">✓</span> Door, lock &amp; fixture repairs
+              </li>
+              <li>
+                <span class="chk">✓</span> Lighting replacement &amp;
+                maintenance
+              </li>
+              <li><span class="chk">✓</span> Exterior &amp; grounds upkeep</li>
+              <li>
+                <span class="chk">✓</span> Safety &amp; compliance inspections
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         SERVICE 3 — FLOOR CARE
+         ═══════════════════════════════════ -->
+    <section class="service-detail" id="floor-care">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80&fit=crop"
+              alt="Professional floor care and polishing service"
+              class="service-detail-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="service-num-badge">03</div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="service-detail-icon">✨</div>
+            <span class="section-label">Service 03</span>
+            <h2>Floor Care</h2>
+            <p>
+              Floors are one of the first things clients and visitors notice.
+              Our professional floor care services restore, protect and maintain
+              all floor types — leaving them looking clean, polished and
+              professionally maintained at all times.
+            </p>
+            <p>
+              From routine maintenance to deep restoration, our floor care
+              specialists have the equipment and expertise to handle any floor
+              type in any commercial or residential setting.
+            </p>
+            <ul class="feature-list">
+              <li><span class="chk">✓</span> Floor stripping &amp; waxing</li>
+              <li><span class="chk">✓</span> Buffing &amp; burnishing</li>
+              <li>
+                <span class="chk">✓</span> Carpet deep cleaning &amp; shampooing
+              </li>
+              <li><span class="chk">✓</span> Tile &amp; grout cleaning</li>
+              <li>
+                <span class="chk">✓</span> Hardwood floor care &amp; polishing
+              </li>
+              <li>
+                <span class="chk">✓</span> Vinyl &amp; LVT floor maintenance
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         SERVICE 4 — WASTE MANAGEMENT
+         ═══════════════════════════════════ -->
+    <section class="service-detail" id="waste">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80&fit=crop"
+              alt="Waste management and recycling services"
+              class="service-detail-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="service-num-badge">04</div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="service-detail-icon">♻️</div>
+            <span class="section-label">Service 04</span>
+            <h2>Waste Management</h2>
+            <p>
+              Proper waste management is essential for maintaining a clean,
+              compliant and environmentally responsible facility. Our waste
+              management services ensure your property is free from clutter,
+              odours and compliance issues.
+            </p>
+            <p>
+              We provide scheduled waste collection, removal and recycling
+              programmes for commercial and residential properties — designed
+              around your facility's specific waste output and requirements.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Scheduled waste collection &amp;
+                removal
+              </li>
+              <li>
+                <span class="chk">✓</span> Recycling programme setup &amp;
+                management
+              </li>
+              <li><span class="chk">✓</span> Bin cleaning &amp; sanitation</li>
+              <li><span class="chk">✓</span> Bulk waste &amp; junk removal</li>
+              <li>
+                <span class="chk">✓</span> Hazardous waste disposal (licensed)
+              </li>
+              <li>
+                <span class="chk">✓</span> Waste audit &amp; compliance
+                reporting
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         SERVICE 5 — COMMERCIAL CLEANING
+         ═══════════════════════════════════ -->
+    <section class="service-detail" id="commercial">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&fit=crop"
+              alt="Office and commercial cleaning services"
+              class="service-detail-img"
+              loading="lazy"
+              width="800"
+              height="420"
+            />
+            <div class="service-num-badge">05</div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="service-detail-icon">🏢</div>
+            <span class="section-label">Service 05</span>
+            <h2>Office &amp; Commercial Cleaning</h2>
+            <p>
+              A clean workplace boosts productivity, improves employee wellbeing
+              and creates a positive first impression for every client and
+              visitor who walks through the door. Our office and commercial
+              cleaning service delivers exactly that — reliably and
+              professionally.
+            </p>
+            <p>
+              We tailor every cleaning programme to the specific layout, size
+              and requirements of your commercial space — from small offices to
+              large multi-floor buildings and retail environments.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <span class="chk">✓</span> Full office &amp; workstation
+                cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Reception, lobby &amp; common area
+                cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Retail shop floor &amp; fitting room
+                cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Post-construction &amp; deep cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> Window &amp; glass surface cleaning
+              </li>
+              <li>
+                <span class="chk">✓</span> COVID-safe disinfection protocols
+                available
+              </li>
+            </ul>
+            <a
+              href="quote.html"
+              class="btn btn-primary"
+              style="width: fit-content; margin-top: 0.5rem"
+              >Get a Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         WHY APEX STRIP
+         ═══════════════════════════════════ -->
+    <section class="why-strip">
+      <div class="container">
+        <div class="why-strip-grid">
+          <div class="why-strip-card">
+            <div class="icon">🏆</div>
+            <h4>15+ Years Experience</h4>
+            <p>Trusted by 500+ clients across Las Vegas &amp; Nevada</p>
+          </div>
+          <div class="why-strip-card">
+            <div class="icon">🔒</div>
+            <h4>Licensed &amp; Insured</h4>
+            <p>Fully bonded with background-checked staff on every job</p>
+          </div>
+          <div class="why-strip-card">
+            <div class="icon">📋</div>
+            <h4>Custom Plans</h4>
+            <p>Every service plan is tailored to your facility's needs</p>
+          </div>
+          <div class="why-strip-card">
+            <div class="icon">♻️</div>
+            <h4>Eco-Friendly</h4>
+            <p>Green cleaning products safe for people &amp; the planet</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         CTA
+         ═══════════════════════════════════ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="section-label">Let's Get Started</span>
+          <h2>Request a Free Service Quote</h2>
+          <p>
+            Tell us about your facility and the services you need — we'll
+            respond within one business day with a clear, competitive and
+            no-obligation quote.
+          </p>
+          <div class="cta-btns">
+            <a href="quote.html" class="btn btn-cta">Get a Free Quote →</a>
+            <a href="tel:+17029695582" class="btn btn-outline-light"
+              >📞 (702) 969-5582</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Apex Facilities" />
+            <span class="footer-logo-text">Apex Facilities</span>
+          </div>
+          <p>
+            Professional facilities management in Las Vegas, NV. Janitorial,
+            maintenance, floor care and more.
+          </p>
+          <div style="display: grid; gap: 0.5rem; margin-top: 0.25rem">
+            <div class="footer-contact-item">
+              📍 4335 China Silk Ct, Las Vegas, NV 89129
+            </div>
+            <div class="footer-contact-item">
+              📞 <a href="tel:+17029695582">(702) 969-5582</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#janitorial">Janitorial &amp; Cleaning</a></li>
+            <li><a href="#maintenance">Building Maintenance</a></li>
+            <li><a href="#floor-care">Floor Care</a></li>
+            <li><a href="#waste">Waste Management</a></li>
+            <li><a href="#commercial">Office &amp; Commercial Cleaning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="industries.html">Healthcare</a></li>
+            <li><a href="industries.html">Education</a></li>
+            <li><a href="industries.html">Corporate Offices</a></li>
+            <li><a href="industries.html">Retail</a></li>
+            <li><a href="industries.html">Government</a></li>
+            <li><a href="industries.html">Residential</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Apex Facilities. All rights reserved. | Las Vegas, Nevada</p>
+        <p>Licensed · Insured · Bonded</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

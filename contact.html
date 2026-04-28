@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Apex Facilities — Las Vegas, NV</title>
+    <meta
+      name="description"
+      content="Contact Apex Facilities in Las Vegas, NV. Call (702) 969-5582 or send a message. Professional facilities management for commercial and residential clients."
+    />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* ── PAGE HERO ────────────────────────────── */
+      .page-hero {
+        background: var(--color-primary);
+        padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 7vw, 5rem);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 80% at 5% 60%,
+            rgba(45, 140, 202, 0.14) 0%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 50% 60% at 95% 10%,
+            rgba(255, 255, 255, 0.03) 0%,
+            transparent 55%
+          );
+        pointer-events: none;
+      }
+
+      .page-hero .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent-light);
+        background: rgba(45, 140, 202, 0.15);
+        border: 1px solid rgba(45, 140, 202, 0.3);
+        padding: 0.35rem 0.9rem;
+        border-radius: 9999px;
+        margin-bottom: 1.25rem;
+      }
+
+      .page-hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4.5vw, 3.25rem);
+        color: #fff;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+      }
+
+      .page-hero h1 em {
+        font-style: normal;
+        color: var(--color-accent-light);
+      }
+
+      .page-hero-desc {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.82;
+        max-width: 52ch;
+        margin-inline: auto;
+      }
+
+      /* ── CONTACT SECTION ──────────────────────── */
+      .contact-section {
+        padding: clamp(3.5rem, 8vw, 6rem) 0;
+        background: var(--color-surface);
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.55fr;
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: start;
+      }
+
+      /* ── CONTACT INFO PANEL ───────────────────── */
+      .contact-info {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .contact-info-header {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .contact-info-header h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        color: var(--color-primary);
+        line-height: 1.18;
+      }
+
+      .contact-info-header p {
+        font-size: 0.9375rem;
+        color: var(--color-text-muted);
+        line-height: 1.78;
+      }
+
+      /* Contact detail cards */
+      .contact-detail-card {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        transition:
+          box-shadow 0.22s ease,
+          transform 0.22s ease;
+        text-decoration: none;
+      }
+
+      .contact-detail-card:hover {
+        box-shadow: 0 6px 20px rgba(26, 79, 138, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .contact-detail-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 0.875rem;
+        background: rgba(26, 79, 138, 0.08);
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      .contact-detail-text {
+        display: grid;
+        gap: 2px;
+      }
+
+      .contact-detail-text strong {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--color-text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .contact-detail-text span,
+      .contact-detail-text a {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+        line-height: 1.5;
+      }
+
+      .contact-detail-text a:hover {
+        color: var(--color-accent);
+      }
+
+      /* Hours card */
+      .hours-card {
+        background: var(--color-primary);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .hours-card h4 {
+        font-family: var(--font-display);
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .hours-list {
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .hours-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .hours-row:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .hours-row span:first-child {
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      .hours-row span:last-child {
+        font-weight: 600;
+        color: var(--color-accent-light);
+      }
+
+      /* ── CONTACT FORM ─────────────────────────── */
+      .contact-form-wrap {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 1.25rem;
+        padding: clamp(2rem, 5vw, 3rem);
+        box-shadow: 0 8px 32px rgba(26, 79, 138, 0.06);
+      }
+
+      .form-header {
+        margin-bottom: 2rem;
+      }
+
+      .form-header h3 {
+        font-family: var(--font-display);
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 0.4rem;
+      }
+
+      .form-header p {
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+        line-height: 1.6;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+      }
+
+      .form-group {
+        display: grid;
+        gap: 0.45rem;
+      }
+      .form-group.full {
+        grid-column: 1 / -1;
+      }
+
+      .form-group label {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--color-text);
+        letter-spacing: 0.02em;
+      }
+
+      .form-group label span {
+        color: var(--color-cta);
+        margin-left: 2px;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1.5px solid var(--color-border);
+        border-radius: var(--radius-md);
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        color: var(--color-text);
+        background: var(--color-surface);
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 3px rgba(45, 140, 202, 0.12);
+        background: #fff;
+      }
+
+      .form-group input::placeholder,
+      .form-group textarea::placeholder {
+        color: var(--color-text-faint);
+      }
+
+      .form-group select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        padding-right: 2.5rem;
+        cursor: pointer;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 130px;
+        line-height: 1.65;
+      }
+
+      .form-submit {
+        margin-top: 0.5rem;
+      }
+
+      .form-submit .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+      }
+
+      .form-note {
+        font-size: 0.78rem;
+        color: var(--color-text-faint);
+        text-align: center;
+        margin-top: 0.75rem;
+        line-height: 1.55;
+      }
+
+      /* Success message */
+      .form-success {
+        display: none;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+      }
+
+      .form-success-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        line-height: 1;
+      }
+
+      .form-success h4 {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .form-success p {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+        line-height: 1.65;
+      }
+
+      /* ── MAP SECTION ──────────────────────────── */
+      .map-section {
+        padding: clamp(3rem, 6vw, 5rem) 0;
+        background: #fff;
+      }
+
+      .map-section .section-header {
+        text-align: center;
+        max-width: 540px;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+      }
+
+      .map-section .section-header h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        color: var(--color-primary);
+        margin-bottom: 0.75rem;
+      }
+
+      .map-section .section-header p {
+        font-size: 0.9375rem;
+        color: var(--color-text-muted);
+        line-height: 1.72;
+      }
+
+      .map-wrap {
+        border-radius: 1.25rem;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(26, 79, 138, 0.1);
+        border: 1px solid var(--color-border);
+      }
+
+      .map-wrap iframe {
+        width: 100%;
+        height: 420px;
+        display: block;
+        border: none;
+      }
+
+      /* Map info strip below map */
+      .map-info-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+      }
+
+      .map-info-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+      }
+
+      .map-info-icon {
+        font-size: 1.5rem;
+        line-height: 1;
+        flex-shrink: 0;
+      }
+
+      .map-info-text strong {
+        display: block;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 2px;
+      }
+
+      .map-info-text span,
+      .map-info-text a {
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .map-info-text a:hover {
+        color: var(--color-accent);
+      }
+
+      /* ── SHARED LABEL ─────────────────────────── */
+      .section-label {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        background: rgba(45, 140, 202, 0.1);
+        border: 1px solid rgba(45, 140, 202, 0.22);
+        padding: 0.3rem 0.8rem;
+        border-radius: 9999px;
+        margin-bottom: 1rem;
+      }
+
+      /* ── CTA ──────────────────────────────────── */
+      .cta-section {
+        padding: clamp(3rem, 7vw, 5rem) 0;
+        background: var(--color-surface);
+      }
+
+      .cta-box {
+        background: var(--color-primary);
+        border-radius: 1.5rem;
+        padding: clamp(2.5rem, 6vw, 4rem);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 55% 80% at 50% 120%,
+          rgba(45, 140, 202, 0.2) 0%,
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+
+      .cta-box > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-box .section-label {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.9);
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      .cta-box h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3vw, 2.25rem);
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+
+      .cta-box p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.68);
+        max-width: 52ch;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+        line-height: 1.78;
+      }
+
+      .cta-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      /* ── FOOTER ───────────────────────────────── */
+      .footer {
+        background: var(--color-primary-deeper);
+        padding-top: clamp(3rem, 6vw, 5rem);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.65fr repeat(3, 1fr);
+        gap: clamp(1.5rem, 4vw, 3rem);
+        padding-bottom: clamp(2.5rem, 5vw, 4rem);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-brand {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .footer-logo img {
+        height: 36px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      .footer-logo-text {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #fff;
+      }
+
+      .footer-brand p {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.48);
+        line-height: 1.78;
+        max-width: 34ch;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.5;
+      }
+
+      .footer-contact-item a {
+        color: var(--color-accent-light);
+        transition: color 0.2s ease;
+      }
+
+      .footer-contact-item a:hover {
+        color: #fff;
+      }
+
+      .footer-col {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .footer-col h4 {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .footer-col ul {
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .footer-col li,
+      .footer-col a {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.48);
+        transition: color 0.2s ease;
+        line-height: 1.5;
+        text-decoration: none;
+      }
+
+      .footer-col a:hover {
+        color: var(--color-accent-light);
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding-block: 1.5rem;
+      }
+
+      .footer-bottom p {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      /* ── RESPONSIVE ───────────────────────────── */
+      @media (max-width: 1024px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .map-info-strip {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-brand {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+        .form-group.full {
+          grid-column: auto;
+        }
+        .map-info-strip {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-brand {
+          grid-column: auto;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .cta-btns {
+          flex-direction: column;
+          align-items: center;
+        }
+        .cta-btns .btn {
+          width: 100%;
+          max-width: 320px;
+          justify-content: center;
+        }
+        .map-wrap iframe {
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            \
+            <span class="logo-text">Apex Facilities</span>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+          <a href="quote.html" class="btn btn-cta nav-cta">Request a Quote</a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════
+         PAGE HERO
+         ═══════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="page-hero-eyebrow">📞 Get in Touch</span>
+        <h1>Contact <em>Apex Facilities</em></h1>
+        <p class="page-hero-desc">
+          Have a question or ready to get started? Reach out by phone, email or
+          the form below — we respond to all enquiries within one business day.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         CONTACT SECTION
+         ═══════════════════════════════════ -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- LEFT — Contact info -->
+          <div class="contact-info">
+            <div class="contact-info-header">
+              <span class="section-label">Contact Information</span>
+              <h2>We're Here to Help</h2>
+              <p>
+                Whether you need a quote, want to discuss a service or just have
+                a question — our team is ready to assist you. Reach out using
+                any of the options below.
+              </p>
+            </div>
+
+            <a href="tel:+17029695582" class="contact-detail-card">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <strong>Phone</strong>
+                <a href="tel:+17029695582">(702) 969-5582</a>
+              </div>
+            </a>
+
+            <div class="contact-detail-card">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <strong>Address</strong>
+                <span>4335 China Silk Ct<br />Las Vegas, NV 89129</span>
+              </div>
+            </div>
+
+            <div class="contact-detail-card">
+              <div class="contact-detail-icon">🏢</div>
+              <div class="contact-detail-text">
+                <strong>Service Area</strong>
+                <span
+                  >Las Vegas, Henderson, North Las Vegas &amp; surrounding
+                  Nevada areas</span
+                >
+              </div>
+            </div>
+
+            <div class="contact-detail-card">
+              <div class="contact-detail-icon">⚡</div>
+              <div class="contact-detail-text">
+                <strong>Response Time</strong>
+                <span>Within 1 business day for all enquiries</span>
+              </div>
+            </div>
+
+            <!-- Business hours -->
+            <div class="hours-card">
+              <h4>🕐 Business Hours</h4>
+              <div class="hours-list">
+                <div class="hours-row">
+                  <span>Monday – Friday</span>
+                  <span>7:00 AM – 6:00 PM</span>
+                </div>
+                <div class="hours-row">
+                  <span>Saturday</span>
+                  <span>8:00 AM – 4:00 PM</span>
+                </div>
+                <div class="hours-row">
+                  <span>Sunday</span>
+                  <span>By Appointment</span>
+                </div>
+                <div class="hours-row">
+                  <span>Emergency Services</span>
+                  <span>24/7 Available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT — Contact form -->
+          <div class="contact-form-wrap">
+            <div class="form-header">
+              <h3>Send Us a Message</h3>
+              <p>
+                Fill in the form below and we'll get back to you within one
+                business day.
+              </p>
+            </div>
+
+            <form
+              id="contact-form"
+              action="https://formsubmit.co/your@email.com"
+              method="POST"
+            >
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Contact Message — Apex Facilities"
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="contact.html?sent=true"
+              />
+              <input type="text" name="_honey" style="display: none" />
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="first-name">First Name <span>*</span></label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first_name"
+                    placeholder="John"
+                    required
+                    autocomplete="given-name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="last-name">Last Name <span>*</span></label>
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="last_name"
+                    placeholder="Smith"
+                    required
+                    autocomplete="family-name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address <span>*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="john@company.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="(702) 000-0000"
+                    autocomplete="tel"
+                  />
+                </div>
+
+                <div class="form-group full">
+                  <label for="service">Service of Interest</label>
+                  <select id="service" name="service">
+                    <option value="" disabled selected>
+                      Select a service…
+                    </option>
+                    <option>Janitorial &amp; Cleaning Services</option>
+                    <option>Building Maintenance</option>
+                    <option>Floor Care</option>
+                    <option>Waste Management</option>
+                    <option>Office &amp; Commercial Cleaning</option>
+                    <option>Custom Facility Plan</option>
+                    <option>General Enquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <label for="message">Message <span>*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your facility, the services you need or any questions you have…"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-group full form-submit">
+                  <button type="submit" id="submit-btn" class="btn btn-cta">
+                    Send Message →
+                  </button>
+                  <p class="form-note">
+                    🔒 Your information is safe. We never share your details
+                    with third parties.
+                  </p>
+                </div>
+              </div>
+            </form>
+
+            <!-- Success message (shown via JS after back-navigation) -->
+            <div class="form-success" id="form-success">
+              <div class="form-success-icon">✅</div>
+              <h4>Message Sent!</h4>
+              <p>
+                Thank you for reaching out to Apex Facilities. We've received
+                your message and will get back to you within one business day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         MAP SECTION
+         ═══════════════════════════════════ -->
+    <section class="map-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Location</h2>
+          <p>
+            Based in Las Vegas, NV — serving the greater Las Vegas metro area
+            and surrounding Nevada communities.
+          </p>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218.123!2d-115.2398!3d36.2254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8e9b0f0f0f0f0%3A0x0!2s4335+China+Silk+Ct%2C+Las+Vegas%2C+NV+89129!5e0!3m2!1sen!2sus!4v1700000000000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Apex Facilities location map"
+          ></iframe>
+        </div>
+
+        <div class="map-info-strip">
+          <div class="map-info-card">
+            <div class="map-info-icon">📍</div>
+            <div class="map-info-text">
+              <strong>Address</strong>
+              <span>4335 China Silk Ct, Las Vegas, NV 89129</span>
+            </div>
+          </div>
+          <div class="map-info-card">
+            <div class="map-info-icon">📞</div>
+            <div class="map-info-text">
+              <strong>Phone</strong>
+              <a href="tel:+17029695582">(702) 969-5582</a>
+            </div>
+          </div>
+          <div class="map-info-card">
+            <div class="map-info-icon">🗺️</div>
+            <div class="map-info-text">
+              <strong>Service Area</strong>
+              <span>Las Vegas &amp; greater Nevada area</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         CTA
+         ═══════════════════════════════════ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="section-label">Need a Quote?</span>
+          <h2>Request a Free Facilities Quote</h2>
+          <p>
+            Ready to get a price? Use our detailed quote request form and we'll
+            respond with a tailored, no-obligation proposal within one business
+            day.
+          </p>
+          <div class="cta-btns">
+            <a href="quote.html" class="btn btn-cta">Request a Quote →</a>
+            <a href="tel:+17029695582" class="btn btn-outline-light"
+              >📞 (702) 969-5582</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Apex Facilities" />
+            <span class="footer-logo-text">Apex Facilities</span>
+          </div>
+          <p>
+            Professional facilities management in Las Vegas, NV. Janitorial,
+            maintenance, floor care and more.
+          </p>
+          <div style="display: grid; gap: 0.5rem; margin-top: 0.25rem">
+            <div class="footer-contact-item">
+              📍 4335 China Silk Ct, Las Vegas, NV 89129
+            </div>
+            <div class="footer-contact-item">
+              📞 <a href="tel:+17029695582">(702) 969-5582</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Janitorial &amp; Cleaning</a></li>
+            <li><a href="services.html">Building Maintenance</a></li>
+            <li><a href="services.html">Floor Care</a></li>
+            <li><a href="services.html">Waste Management</a></li>
+            <li>
+              <a href="services.html">Office &amp; Commercial Cleaning</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="industries.html">Healthcare</a></li>
+            <li><a href="industries.html">Education</a></li>
+            <li><a href="industries.html">Corporate Offices</a></li>
+            <li><a href="industries.html">Retail</a></li>
+            <li><a href="industries.html">Government</a></li>
+            <li><a href="industries.html">Residential</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Apex Facilities. All rights reserved. | Las Vegas, Nevada</p>
+        <p>Licensed · Insured · Bonded</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      /* Show success message if redirected back after FormSubmit */
+      (function () {
+        if (window.location.search.includes("sent=true")) {
+          var form = document.getElementById("contact-form");
+          var success = document.getElementById("form-success");
+          if (form && success) {
+            form.style.display = "none";
+            success.style.display = "block";
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
