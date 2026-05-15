@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Request a Quote | Apex Facilities — Las Vegas, NV</title>
-    <meta name="description" content="Request a free, no-obligation facilities management quote from Apex Facilities in Las Vegas, NV. Janitorial, maintenance, floor care and more." />
+    <meta
+      name="description"
+      content="Request a free, no-obligation facilities management quote from Apex Facilities in Las Vegas, NV. Janitorial, maintenance, floor care and more."
+    />
     <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
@@ -22,16 +28,27 @@
       }
 
       .page-hero::before {
-        content: '';
+        content: "";
         position: absolute;
         inset: 0;
         background:
-          radial-gradient(ellipse 60% 80% at 5% 60%, rgba(45,140,202,0.14) 0%, transparent 65%),
-          radial-gradient(ellipse 50% 60% at 95% 10%, rgba(255,255,255,0.03) 0%, transparent 55%);
+          radial-gradient(
+            ellipse 60% 80% at 5% 60%,
+            rgba(45, 140, 202, 0.14) 0%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 50% 60% at 95% 10%,
+            rgba(255, 255, 255, 0.03) 0%,
+            transparent 55%
+          );
         pointer-events: none;
       }
 
-      .page-hero .container { position: relative; z-index: 1; }
+      .page-hero .container {
+        position: relative;
+        z-index: 1;
+      }
 
       .page-hero-eyebrow {
         display: inline-flex;
@@ -42,8 +59,8 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--color-accent-light);
-        background: rgba(45,140,202,0.15);
-        border: 1px solid rgba(45,140,202,0.3);
+        background: rgba(45, 140, 202, 0.15);
+        border: 1px solid rgba(45, 140, 202, 0.3);
         padding: 0.35rem 0.9rem;
         border-radius: 9999px;
         margin-bottom: 1.25rem;
@@ -66,7 +83,7 @@
 
       .page-hero-desc {
         font-size: 1rem;
-        color: rgba(255,255,255,0.65);
+        color: rgba(255, 255, 255, 0.65);
         line-height: 1.82;
         max-width: 52ch;
         margin-inline: auto;
@@ -87,9 +104,9 @@
         gap: 0.45rem;
         font-size: 0.8rem;
         font-weight: 600;
-        color: rgba(255,255,255,0.75);
-        background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(255,255,255,0.14);
+        color: rgba(255, 255, 255, 0.75);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
         padding: 0.4rem 0.9rem;
         border-radius: 9999px;
       }
@@ -108,9 +125,15 @@
       }
 
       /* ── SIDEBAR ──────────────────────────────── */
-      .quote-sidebar { display: grid; gap: 1.25rem; }
+      .quote-sidebar {
+        display: grid;
+        gap: 1.25rem;
+      }
 
-      .sidebar-intro { display: grid; gap: 0.75rem; }
+      .sidebar-intro {
+        display: grid;
+        gap: 0.75rem;
+      }
 
       .sidebar-intro h2 {
         font-family: var(--font-display);
@@ -158,7 +181,7 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background: rgba(14,124,58,0.1);
+        background: rgba(14, 124, 58, 0.1);
         color: var(--color-cta);
         font-size: 0.65rem;
         font-weight: 800;
@@ -180,7 +203,7 @@
 
       .call-card p {
         font-size: 0.82rem;
-        color: rgba(255,255,255,0.65);
+        color: rgba(255, 255, 255, 0.65);
         line-height: 1.55;
       }
 
@@ -197,11 +220,13 @@
         transition: color 0.2s ease;
       }
 
-      .call-card a:hover { color: #fff; }
+      .call-card a:hover {
+        color: #fff;
+      }
 
       .call-card span {
         font-size: 0.75rem;
-        color: rgba(255,255,255,0.45);
+        color: rgba(255, 255, 255, 0.45);
       }
 
       /* ── MULTI-STEP FORM ──────────────────────── */
@@ -210,7 +235,7 @@
         border: 1px solid var(--color-border);
         border-radius: 1.25rem;
         padding: clamp(2rem, 5vw, 3rem);
-        box-shadow: 0 8px 32px rgba(26,79,138,0.07);
+        box-shadow: 0 8px 32px rgba(26, 79, 138, 0.07);
       }
 
       /* Step progress indicator */
@@ -231,7 +256,7 @@
       }
 
       .step-item:not(:last-child)::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 18px;
         left: 50%;
@@ -289,10 +314,16 @@
       }
 
       /* Step panels */
-      .step-panel { display: none; }
-      .step-panel.active { display: block; }
+      .step-panel {
+        display: none;
+      }
+      .step-panel.active {
+        display: block;
+      }
 
-      .step-header { margin-bottom: 1.75rem; }
+      .step-header {
+        margin-bottom: 1.75rem;
+      }
 
       .step-header h3 {
         font-family: var(--font-display);
@@ -315,8 +346,13 @@
         gap: 1.1rem;
       }
 
-      .form-group { display: grid; gap: 0.4rem; }
-      .form-group.full { grid-column: 1 / -1; }
+      .form-group {
+        display: grid;
+        gap: 0.4rem;
+      }
+      .form-group.full {
+        grid-column: 1 / -1;
+      }
 
       .form-group label {
         font-size: 0.8rem;
@@ -325,7 +361,10 @@
         letter-spacing: 0.02em;
       }
 
-      .form-group label span { color: var(--color-cta); margin-left: 2px; }
+      .form-group label span {
+        color: var(--color-cta);
+        margin-left: 2px;
+      }
 
       .form-group input,
       .form-group select,
@@ -338,7 +377,10 @@
         font-size: 0.9rem;
         color: var(--color-text);
         background: var(--color-surface);
-        transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
         outline: none;
         -webkit-appearance: none;
         appearance: none;
@@ -348,12 +390,14 @@
       .form-group select:focus,
       .form-group textarea:focus {
         border-color: var(--color-accent);
-        box-shadow: 0 0 0 3px rgba(45,140,202,0.12);
+        box-shadow: 0 0 0 3px rgba(45, 140, 202, 0.12);
         background: #fff;
       }
 
       .form-group input::placeholder,
-      .form-group textarea::placeholder { color: var(--color-text-faint); }
+      .form-group textarea::placeholder {
+        color: var(--color-text-faint);
+      }
 
       .form-group select {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -395,7 +439,7 @@
 
       .service-check-label:hover {
         border-color: var(--color-accent);
-        background: rgba(45,140,202,0.04);
+        background: rgba(45, 140, 202, 0.04);
       }
 
       .service-check-label input[type="checkbox"] {
@@ -411,11 +455,14 @@
 
       .service-check-label:has(input:checked) {
         border-color: var(--color-primary);
-        background: rgba(26,79,138,0.06);
+        background: rgba(26, 79, 138, 0.06);
         color: var(--color-primary);
       }
 
-      .service-check-icon { font-size: 1rem; line-height: 1; }
+      .service-check-icon {
+        font-size: 1rem;
+        line-height: 1;
+      }
 
       /* Frequency radio pills */
       .freq-grid {
@@ -459,7 +506,7 @@
 
       .freq-label:has(input:checked) {
         border-color: var(--color-primary);
-        background: rgba(26,79,138,0.07);
+        background: rgba(26, 79, 138, 0.07);
         color: var(--color-primary);
       }
 
@@ -472,7 +519,10 @@
         gap: 1rem;
       }
 
-      .step-nav .btn { min-width: 140px; justify-content: center; }
+      .step-nav .btn {
+        min-width: 140px;
+        justify-content: center;
+      }
 
       .step-counter {
         font-size: 0.78rem;
@@ -518,8 +568,8 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--color-accent);
-        background: rgba(45,140,202,0.1);
-        border: 1px solid rgba(45,140,202,0.22);
+        background: rgba(45, 140, 202, 0.1);
+        border: 1px solid rgba(45, 140, 202, 0.22);
         padding: 0.3rem 0.8rem;
         border-radius: 9999px;
         margin-bottom: 1rem;
@@ -536,10 +586,14 @@
         grid-template-columns: 1.65fr repeat(3, 1fr);
         gap: clamp(1.5rem, 4vw, 3rem);
         padding-bottom: clamp(2.5rem, 5vw, 4rem);
-        border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
 
-      .footer-brand { display: grid; gap: 1rem; align-content: start; }
+      .footer-brand {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
 
       .footer-logo {
         display: flex;
@@ -547,7 +601,11 @@
         gap: 0.75rem;
       }
 
-      .footer-logo img { height: 36px; width: auto; object-fit: contain; }
+      .footer-logo img {
+        height: 36px;
+        width: auto;
+        object-fit: contain;
+      }
 
       .footer-logo-text {
         font-family: var(--font-display);
@@ -558,7 +616,7 @@
 
       .footer-brand p {
         font-size: 0.875rem;
-        color: rgba(255,255,255,0.48);
+        color: rgba(255, 255, 255, 0.48);
         line-height: 1.78;
         max-width: 34ch;
       }
@@ -568,7 +626,7 @@
         align-items: flex-start;
         gap: 0.5rem;
         font-size: 0.82rem;
-        color: rgba(255,255,255,0.55);
+        color: rgba(255, 255, 255, 0.55);
         line-height: 1.5;
       }
 
@@ -577,9 +635,15 @@
         transition: color 0.2s ease;
       }
 
-      .footer-contact-item a:hover { color: #fff; }
+      .footer-contact-item a:hover {
+        color: #fff;
+      }
 
-      .footer-col { display: grid; gap: 1rem; align-content: start; }
+      .footer-col {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
 
       .footer-col h4 {
         font-size: 0.72rem;
@@ -589,18 +653,23 @@
         text-transform: uppercase;
       }
 
-      .footer-col ul { display: grid; gap: 0.5rem; }
+      .footer-col ul {
+        display: grid;
+        gap: 0.5rem;
+      }
 
       .footer-col li,
       .footer-col a {
         font-size: 0.875rem;
-        color: rgba(255,255,255,0.48);
+        color: rgba(255, 255, 255, 0.48);
         transition: color 0.2s ease;
         line-height: 1.5;
         text-decoration: none;
       }
 
-      .footer-col a:hover { color: var(--color-accent-light); }
+      .footer-col a:hover {
+        color: var(--color-accent-light);
+      }
 
       .footer-bottom {
         display: flex;
@@ -613,36 +682,57 @@
 
       .footer-bottom p {
         font-size: 0.75rem;
-        color: rgba(255,255,255,0.3);
+        color: rgba(255, 255, 255, 0.3);
       }
 
       /* ── RESPONSIVE ───────────────────────────── */
       @media (max-width: 1024px) {
-        .quote-grid      { grid-template-columns: 1fr; }
-        .footer-grid     { grid-template-columns: 1fr 1fr; }
-        .footer-brand    { grid-column: 1 / -1; }
+        .quote-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-brand {
+          grid-column: 1 / -1;
+        }
       }
 
       @media (max-width: 640px) {
-        .form-grid              { grid-template-columns: 1fr; }
-        .form-group.full        { grid-column: auto; }
-        .services-check-grid    { grid-template-columns: 1fr; }
-        .step-label             { display: none; }
-        .footer-grid            { grid-template-columns: 1fr; }
-        .footer-brand           { grid-column: auto; }
-        .footer-bottom          { flex-direction: column; text-align: center; }
-        .step-nav .btn          { min-width: 110px; }
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+        .form-group.full {
+          grid-column: auto;
+        }
+        .services-check-grid {
+          grid-template-columns: 1fr;
+        }
+        .step-label {
+          display: none;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-brand {
+          grid-column: auto;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .step-nav .btn {
+          min-width: 110px;
+        }
       }
     </style>
   </head>
   <body>
-
     <!-- HEADER -->
     <header class="header">
       <div class="container">
         <nav class="navbar">
           <div class="logo">
-          
             <span class="logo-text">Apex Facilities</span>
           </div>
           <ul class="nav-links" id="nav-links">
@@ -652,14 +742,20 @@
             <li><a href="industries.html">Industries</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          <a href="quote.html" class="btn btn-cta nav-cta active">Request a Quote</a>
-          <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <a href="quote.html" class="btn btn-cta nav-cta active"
+            >Request a Quote</a
+          >
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
             <span></span><span></span><span></span>
           </button>
         </nav>
       </div>
     </header>
-
 
     <!-- ═══════════════════════════════════
          PAGE HERO
@@ -669,9 +765,9 @@
         <span class="page-hero-eyebrow">💬 Free Quote</span>
         <h1>Request a <em>Free Quote</em></h1>
         <p class="page-hero-desc">
-          Tell us about your facility and the services you need — we'll
-          respond within one business day with a clear, tailored and
-          completely no-obligation proposal.
+          Tell us about your facility and the services you need — we'll respond
+          within one business day with a clear, tailored and completely
+          no-obligation proposal.
         </p>
         <div class="hero-trust-row">
           <span class="hero-trust-badge">✅ No obligation</span>
@@ -682,23 +778,20 @@
       </div>
     </section>
 
-
     <!-- ═══════════════════════════════════
          QUOTE SECTION
          ═══════════════════════════════════ -->
     <section class="quote-section">
       <div class="container">
         <div class="quote-grid">
-
           <!-- SIDEBAR -->
           <aside class="quote-sidebar">
-
             <div class="sidebar-intro">
               <span class="section-label">Why Choose Apex?</span>
               <h2>What Happens After You Submit</h2>
               <p>
-                We review every quote request personally — no bots, no
-                automated replies. Here's what to expect:
+                We review every quote request personally — no bots, no automated
+                replies. Here's what to expect:
               </p>
             </div>
 
@@ -710,7 +803,10 @@
               </div>
               <div class="why-item">
                 <span class="chk">2</span>
-                <span>Our team reviews your requirements within 1 business day</span>
+                <span
+                  >Our team reviews your requirements within 1 business
+                  day</span
+                >
               </div>
               <div class="why-item">
                 <span class="chk">3</span>
@@ -722,7 +818,9 @@
               </div>
               <div class="why-item">
                 <span class="chk">5</span>
-                <span>No pressure — accept, decline or ask questions freely</span>
+                <span
+                  >No pressure — accept, decline or ask questions freely</span
+                >
               </div>
             </div>
 
@@ -759,13 +857,10 @@
               <a href="tel:+17029695582">📞 (702) 969-5582</a>
               <span>Mon–Fri 7AM–6PM · Sat 8AM–4PM</span>
             </div>
-
           </aside>
-
 
           <!-- MULTI-STEP FORM -->
           <div class="quote-form-wrap">
-
             <!-- Step progress -->
             <div class="step-progress" id="step-progress">
               <div class="step-item active" data-step="1">
@@ -793,130 +888,266 @@
             >
               <!-- FormSubmit config -->
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value="New Quote Request — Apex Facilities" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Quote Request — Apex Facilities"
+              />
               <input type="hidden" name="_next" value="quote.html?sent=true" />
               <input type="hidden" name="_template" value="table" />
-              <input type="text" name="_honey" style="display:none" />
-
+              <input type="text" name="_honey" style="display: none" />
 
               <!-- ── STEP 1: Your Details ── -->
               <div class="step-panel active" id="step-1">
                 <div class="step-header">
                   <h3>👤 Your Contact Details</h3>
-                  <p>Tell us who you are so we can get back to you with your quote.</p>
+                  <p>
+                    Tell us who you are so we can get back to you with your
+                    quote.
+                  </p>
                 </div>
                 <div class="form-grid">
                   <div class="form-group">
                     <label for="q-first">First Name <span>*</span></label>
-                    <input type="text" id="q-first" name="first_name" placeholder="John" required autocomplete="given-name" />
+                    <input
+                      type="text"
+                      id="q-first"
+                      name="first_name"
+                      placeholder="John"
+                      required
+                      autocomplete="given-name"
+                    />
                   </div>
                   <div class="form-group">
                     <label for="q-last">Last Name <span>*</span></label>
-                    <input type="text" id="q-last" name="last_name" placeholder="Smith" required autocomplete="family-name" />
+                    <input
+                      type="text"
+                      id="q-last"
+                      name="last_name"
+                      placeholder="Smith"
+                      required
+                      autocomplete="family-name"
+                    />
                   </div>
                   <div class="form-group">
                     <label for="q-email">Email Address <span>*</span></label>
-                    <input type="email" id="q-email" name="email" placeholder="john@company.com" required autocomplete="email" />
+                    <input
+                      type="email"
+                      id="q-email"
+                      name="email"
+                      placeholder="john@company.com"
+                      required
+                      autocomplete="email"
+                    />
                   </div>
                   <div class="form-group">
                     <label for="q-phone">Phone Number <span>*</span></label>
-                    <input type="tel" id="q-phone" name="phone" placeholder="(702) 000-0000" required autocomplete="tel" />
+                    <input
+                      type="tel"
+                      id="q-phone"
+                      name="phone"
+                      placeholder="(702) 000-0000"
+                      required
+                      autocomplete="tel"
+                    />
                   </div>
                   <div class="form-group full">
                     <label for="q-company">Company / Organisation Name</label>
-                    <input type="text" id="q-company" name="company" placeholder="Acme Corp (leave blank if residential)" autocomplete="organization" />
+                    <input
+                      type="text"
+                      id="q-company"
+                      name="company"
+                      placeholder="Acme Corp (leave blank if residential)"
+                      autocomplete="organization"
+                    />
                   </div>
                   <div class="form-group full">
                     <label for="q-role">Your Role / Title</label>
-                    <input type="text" id="q-role" name="role" placeholder="e.g. Facilities Manager, Property Owner, Office Manager" />
+                    <input
+                      type="text"
+                      id="q-role"
+                      name="role"
+                      placeholder="e.g. Facilities Manager, Property Owner, Office Manager"
+                    />
                   </div>
                 </div>
                 <div class="step-nav">
                   <span class="step-counter">Step 1 of 4</span>
-                  <button type="button" class="btn btn-primary" onclick="goToStep(2)">Next: Services →</button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="goToStep(2)"
+                  >
+                    Next: Services →
+                  </button>
                 </div>
               </div>
-
 
               <!-- ── STEP 2: Services ── -->
               <div class="step-panel" id="step-2">
                 <div class="step-header">
                   <h3>🧹 Services Required</h3>
-                  <p>Select all the services you're interested in — you can choose more than one.</p>
+                  <p>
+                    Select all the services you're interested in — you can
+                    choose more than one.
+                  </p>
                 </div>
 
                 <div class="form-group full">
                   <label>Services Needed <span>*</span></label>
                   <div class="services-check-grid">
                     <label class="service-check-label">
-                      <input type="checkbox" name="services[]" value="Janitorial &amp; Cleaning" />
+                      <input
+                        type="checkbox"
+                        name="services[]"
+                        value="Janitorial &amp; Cleaning"
+                      />
                       <span class="service-check-icon">🧹</span>
                       Janitorial &amp; Cleaning
                     </label>
                     <label class="service-check-label">
-                      <input type="checkbox" name="services[]" value="Building Maintenance" />
+                      <input
+                        type="checkbox"
+                        name="services[]"
+                        value="Building Maintenance"
+                      />
                       <span class="service-check-icon">🔧</span>
                       Building Maintenance
                     </label>
                     <label class="service-check-label">
-                      <input type="checkbox" name="services[]" value="Floor Care" />
+                      <input
+                        type="checkbox"
+                        name="services[]"
+                        value="Floor Care"
+                      />
                       <span class="service-check-icon">✨</span>
                       Floor Care
                     </label>
                     <label class="service-check-label">
-                      <input type="checkbox" name="services[]" value="Waste Management" />
+                      <input
+                        type="checkbox"
+                        name="services[]"
+                        value="Waste Management"
+                      />
                       <span class="service-check-icon">♻️</span>
                       Waste Management
                     </label>
                     <label class="service-check-label">
-                      <input type="checkbox" name="services[]" value="Office &amp; Commercial Cleaning" />
+                      <input
+                        type="checkbox"
+                        name="services[]"
+                        value="Office &amp; Commercial Cleaning"
+                      />
                       <span class="service-check-icon">🏢</span>
                       Office &amp; Commercial Cleaning
                     </label>
                     <label class="service-check-label">
-                      <input type="checkbox" name="services[]" value="Custom Facility Plan" />
+                      <input
+                        type="checkbox"
+                        name="services[]"
+                        value="Custom Facility Plan"
+                      />
                       <span class="service-check-icon">📋</span>
                       Custom Facility Plan
                     </label>
                   </div>
                 </div>
 
-                <div class="form-group full" style="margin-top:1.25rem;">
+                <div class="form-group full" style="margin-top: 1.25rem">
                   <label>Preferred Service Frequency</label>
                   <div class="freq-grid">
-                    <label class="freq-label"><input type="radio" name="frequency" value="Daily" /> Daily</label>
-                    <label class="freq-label"><input type="radio" name="frequency" value="3x per week" /> 3× per week</label>
-                    <label class="freq-label"><input type="radio" name="frequency" value="Weekly" /> Weekly</label>
-                    <label class="freq-label"><input type="radio" name="frequency" value="Bi-weekly" /> Bi-weekly</label>
-                    <label class="freq-label"><input type="radio" name="frequency" value="Monthly" /> Monthly</label>
-                    <label class="freq-label"><input type="radio" name="frequency" value="One-time / Deep clean" /> One-time / Deep clean</label>
-                    <label class="freq-label"><input type="radio" name="frequency" value="Not sure yet" /> Not sure yet</label>
+                    <label class="freq-label"
+                      ><input type="radio" name="frequency" value="Daily" />
+                      Daily</label
+                    >
+                    <label class="freq-label"
+                      ><input
+                        type="radio"
+                        name="frequency"
+                        value="3x per week"
+                      />
+                      3× per week</label
+                    >
+                    <label class="freq-label"
+                      ><input type="radio" name="frequency" value="Weekly" />
+                      Weekly</label
+                    >
+                    <label class="freq-label"
+                      ><input type="radio" name="frequency" value="Bi-weekly" />
+                      Bi-weekly</label
+                    >
+                    <label class="freq-label"
+                      ><input type="radio" name="frequency" value="Monthly" />
+                      Monthly</label
+                    >
+                    <label class="freq-label"
+                      ><input
+                        type="radio"
+                        name="frequency"
+                        value="One-time / Deep clean"
+                      />
+                      One-time / Deep clean</label
+                    >
+                    <label class="freq-label"
+                      ><input
+                        type="radio"
+                        name="frequency"
+                        value="Not sure yet"
+                      />
+                      Not sure yet</label
+                    >
                   </div>
                 </div>
 
                 <div class="step-nav">
-                  <button type="button" class="btn btn-outline" onclick="goToStep(1)">← Back</button>
+                  <button
+                    type="button"
+                    class="btn btn-outline"
+                    onclick="goToStep(1)"
+                  >
+                    ← Back
+                  </button>
                   <span class="step-counter">Step 2 of 4</span>
-                  <button type="button" class="btn btn-primary" onclick="goToStep(3)">Next: Facility →</button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="goToStep(3)"
+                  >
+                    Next: Facility →
+                  </button>
                 </div>
               </div>
-
 
               <!-- ── STEP 3: Facility Details ── -->
               <div class="step-panel" id="step-3">
                 <div class="step-header">
                   <h3>🏢 Your Facility</h3>
-                  <p>Tell us about the property so we can tailor the quote accurately.</p>
+                  <p>
+                    Tell us about the property so we can tailor the quote
+                    accurately.
+                  </p>
                 </div>
                 <div class="form-grid">
                   <div class="form-group full">
-                    <label for="q-address">Facility Address <span>*</span></label>
-                    <input type="text" id="q-address" name="facility_address" placeholder="123 Main St, Las Vegas, NV 89101" required />
+                    <label for="q-address"
+                      >Facility Address <span>*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="q-address"
+                      name="facility_address"
+                      placeholder="123 Main St, Las Vegas, NV 89101"
+                      required
+                    />
                   </div>
                   <div class="form-group">
-                    <label for="q-industry">Industry / Sector <span>*</span></label>
+                    <label for="q-industry"
+                      >Industry / Sector <span>*</span></label
+                    >
                     <select id="q-industry" name="industry" required>
-                      <option value="" disabled selected>Select industry…</option>
+                      <option value="" disabled selected>
+                        Select industry…
+                      </option>
                       <option>Healthcare</option>
                       <option>Education</option>
                       <option>Corporate / Office</option>
@@ -963,56 +1194,122 @@
                   </div>
                 </div>
                 <div class="step-nav">
-                  <button type="button" class="btn btn-outline" onclick="goToStep(2)">← Back</button>
+                  <button
+                    type="button"
+                    class="btn btn-outline"
+                    onclick="goToStep(2)"
+                  >
+                    ← Back
+                  </button>
                   <span class="step-counter">Step 3 of 4</span>
-                  <button type="button" class="btn btn-primary" onclick="goToStep(4)">Review Quote →</button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="goToStep(4)"
+                  >
+                    Review Quote →
+                  </button>
                 </div>
               </div>
-
 
               <!-- ── STEP 4: Review & Submit ── -->
               <div class="step-panel" id="step-4">
                 <div class="step-header">
                   <h3>✅ Review &amp; Submit</h3>
-                  <p>Check your details below then submit — we'll be in touch within one business day.</p>
+                  <p>
+                    Check your details below then submit — we'll be in touch
+                    within one business day.
+                  </p>
                 </div>
 
                 <!-- Summary box -->
-                <div id="review-summary" style="
-                  background: var(--color-surface);
-                  border: 1px solid var(--color-border);
-                  border-radius: 0.875rem;
-                  padding: 1.5rem;
-                  margin-bottom: 1.5rem;
-                  display: grid;
-                  gap: 1rem;
-                  font-size: 0.875rem;
-                ">
+                <div
+                  id="review-summary"
+                  style="
+                    background: var(--color-surface);
+                    border: 1px solid var(--color-border);
+                    border-radius: 0.875rem;
+                    padding: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    display: grid;
+                    gap: 1rem;
+                    font-size: 0.875rem;
+                  "
+                >
                   <div id="summary-contact"></div>
-                  <hr style="border:none;border-top:1px solid var(--color-border);" />
+                  <hr
+                    style="
+                      border: none;
+                      border-top: 1px solid var(--color-border);
+                    "
+                  />
                   <div id="summary-services"></div>
-                  <hr style="border:none;border-top:1px solid var(--color-border);" />
+                  <hr
+                    style="
+                      border: none;
+                      border-top: 1px solid var(--color-border);
+                    "
+                  />
                   <div id="summary-facility"></div>
                 </div>
 
-                <div class="form-group full" style="margin-bottom:1rem;">
-                  <label style="display:flex;align-items:flex-start;gap:0.6rem;cursor:pointer;font-weight:500;">
-                    <input type="checkbox" name="agree" required style="width:16px;height:16px;margin-top:2px;accent-color:var(--color-primary);flex-shrink:0;padding:0;border:none;background:none;" />
-                    I agree that Apex Facilities may contact me regarding this quote request. I understand this is completely free and no obligation.
+                <div class="form-group full" style="margin-bottom: 1rem">
+                  <label
+                    style="
+                      display: flex;
+                      align-items: flex-start;
+                      gap: 0.6rem;
+                      cursor: pointer;
+                      font-weight: 500;
+                    "
+                  >
+                    <input
+                      type="checkbox"
+                      name="agree"
+                      required
+                      style="
+                        width: 16px;
+                        height: 16px;
+                        margin-top: 2px;
+                        accent-color: var(--color-primary);
+                        flex-shrink: 0;
+                        padding: 0;
+                        border: none;
+                        background: none;
+                      "
+                    />
+                    I agree that Apex Facilities may contact me regarding this
+                    quote request. I understand this is completely free and no
+                    obligation.
                   </label>
                 </div>
 
                 <div class="step-nav">
-                  <button type="button" class="btn btn-outline" onclick="goToStep(3)">← Back</button>
+                  <button
+                    type="button"
+                    class="btn btn-outline"
+                    onclick="goToStep(3)"
+                  >
+                    ← Back
+                  </button>
                   <span class="step-counter">Step 4 of 4</span>
-                  <button type="submit" class="btn btn-cta">Submit Quote Request →</button>
+                  <button type="submit" class="btn btn-cta">
+                    Submit Quote Request →
+                  </button>
                 </div>
 
-                <p style="font-size:0.75rem;color:var(--color-text-faint);margin-top:1rem;text-align:right;">
-                  🔒 Your information is secure and never shared with third parties.
+                <p
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--color-text-faint);
+                    margin-top: 1rem;
+                    text-align: right;
+                  "
+                >
+                  🔒 Your information is secure and never shared with third
+                  parties.
                 </p>
               </div>
-
             </form>
 
             <!-- Success state -->
@@ -1020,18 +1317,16 @@
               <div class="quote-success-icon">🎉</div>
               <h3>Quote Request Received!</h3>
               <p>
-                Thank you for reaching out to Apex Facilities. Our team
-                will review your request and get back to you within one
-                business day with a tailored proposal.
+                Thank you for reaching out to Apex Facilities. Our team will
+                review your request and get back to you within one business day
+                with a tailored proposal.
               </p>
               <a href="index.html" class="btn btn-primary">← Back to Home</a>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -1041,12 +1336,22 @@
             <img src="images/logo.png" alt="Apex Facilities" />
             <span class="footer-logo-text">Apex Facilities</span>
           </div>
-          <p>Professional facilities management in Las Vegas, NV. Janitorial, maintenance, floor care and more.</p>
-          <div style="display:grid;gap:0.5rem;margin-top:0.25rem;">
-            <div class="footer-contact-item">📍 4335 China Silk Ct, Las Vegas, NV 89129</div>
-            <div class="footer-contact-item">📞 <a href="tel:+17029695582">(702) 969-5582</a></div>
+          <p>
+            Professional facilities management services in Las Vegas, NV.
+            Janitorial, maintenance, floor care and more for commercial and
+            residential clients.
+          </p>
+          <div style="display: grid; gap: 0.5rem; margin-top: 0.25rem">
+            <div class="footer-contact-item">
+              📍 7455 Arroyo Crossing Spring Valley, UNIT 220, Las Vegas, NV
+              89113,
+            </div>
+            <div class="footer-contact-item">
+              📞 <a href="tel:+17029695582">(702) 969-5582</a>
+            </div>
           </div>
         </div>
+
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
@@ -1058,6 +1363,7 @@
             <li><a href="quote.html">Request a Quote</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
@@ -1065,9 +1371,13 @@
             <li><a href="services.html">Building Maintenance</a></li>
             <li><a href="services.html">Floor Care</a></li>
             <li><a href="services.html">Waste Management</a></li>
-            <li><a href="services.html">Office &amp; Commercial Cleaning</a></li>
+            <li>
+              <a href="services.html">Office &amp; Commercial Cleaning</a>
+            </li>
+            <li><a href="quote.html">Custom Plans</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4>Industries</h4>
           <ul>
@@ -1094,103 +1404,131 @@
       function goToStep(n) {
         /* Basic validation on step 1 before advancing */
         if (n > currentStep && currentStep === 1) {
-          var first = document.getElementById('q-first');
-          var last  = document.getElementById('q-last');
-          var email = document.getElementById('q-email');
-          var phone = document.getElementById('q-phone');
-          if (!first.value.trim() || !last.value.trim() || !email.value.trim() || !phone.value.trim()) {
-            alert('Please fill in all required fields before continuing.');
+          var first = document.getElementById("q-first");
+          var last = document.getElementById("q-last");
+          var email = document.getElementById("q-email");
+          var phone = document.getElementById("q-phone");
+          if (
+            !first.value.trim() ||
+            !last.value.trim() ||
+            !email.value.trim() ||
+            !phone.value.trim()
+          ) {
+            alert("Please fill in all required fields before continuing.");
             return;
           }
         }
         /* Validate step 3 address before advancing */
         if (n > currentStep && currentStep === 3) {
-          var addr = document.getElementById('q-address');
-          var ind  = document.getElementById('q-industry');
+          var addr = document.getElementById("q-address");
+          var ind = document.getElementById("q-industry");
           if (!addr.value.trim() || !ind.value) {
-            alert('Please fill in the facility address and industry before continuing.');
+            alert(
+              "Please fill in the facility address and industry before continuing.",
+            );
             return;
           }
         }
 
         /* Hide all panels */
-        document.querySelectorAll('.step-panel').forEach(function(p) {
-          p.classList.remove('active');
+        document.querySelectorAll(".step-panel").forEach(function (p) {
+          p.classList.remove("active");
         });
 
         /* Update progress indicators */
-        document.querySelectorAll('.step-item').forEach(function(item) {
+        document.querySelectorAll(".step-item").forEach(function (item) {
           var s = parseInt(item.dataset.step);
-          item.classList.remove('active', 'completed');
-          if (s === n) item.classList.add('active');
-          if (s < n)  item.classList.add('completed');
+          item.classList.remove("active", "completed");
+          if (s === n) item.classList.add("active");
+          if (s < n) item.classList.add("completed");
         });
 
         /* Show target panel */
-        document.getElementById('step-' + n).classList.add('active');
+        document.getElementById("step-" + n).classList.add("active");
         currentStep = n;
 
         /* Build review summary on step 4 */
         if (n === 4) buildReview();
 
         /* Scroll form into view smoothly */
-        document.querySelector('.quote-form-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document
+          .querySelector(".quote-form-wrap")
+          .scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
       function buildReview() {
         /* Contact */
-        var first   = document.getElementById('q-first').value;
-        var last    = document.getElementById('q-last').value;
-        var email   = document.getElementById('q-email').value;
-        var phone   = document.getElementById('q-phone').value;
-        var company = document.getElementById('q-company').value;
-        var role    = document.getElementById('q-role').value;
+        var first = document.getElementById("q-first").value;
+        var last = document.getElementById("q-last").value;
+        var email = document.getElementById("q-email").value;
+        var phone = document.getElementById("q-phone").value;
+        var company = document.getElementById("q-company").value;
+        var role = document.getElementById("q-role").value;
 
-        var contactHtml = '<strong style="color:var(--color-primary);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;">Contact Details</strong><div style="margin-top:0.5rem;display:grid;gap:0.3rem;">';
-        contactHtml += '<span>👤 ' + first + ' ' + last + (role ? ' — ' + role : '') + '</span>';
-        contactHtml += '<span>📧 ' + email + '</span>';
-        contactHtml += '<span>📞 ' + phone + '</span>';
-        if (company) contactHtml += '<span>🏢 ' + company + '</span>';
-        contactHtml += '</div>';
-        document.getElementById('summary-contact').innerHTML = contactHtml;
+        var contactHtml =
+          '<strong style="color:var(--color-primary);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;">Contact Details</strong><div style="margin-top:0.5rem;display:grid;gap:0.3rem;">';
+        contactHtml +=
+          "<span>👤 " +
+          first +
+          " " +
+          last +
+          (role ? " — " + role : "") +
+          "</span>";
+        contactHtml += "<span>📧 " + email + "</span>";
+        contactHtml += "<span>📞 " + phone + "</span>";
+        if (company) contactHtml += "<span>🏢 " + company + "</span>";
+        contactHtml += "</div>";
+        document.getElementById("summary-contact").innerHTML = contactHtml;
 
         /* Services */
-        var checked = Array.from(document.querySelectorAll('input[name="services[]"]:checked')).map(function(c){ return c.value; });
-        var freq    = document.querySelector('input[name="frequency"]:checked');
-        var svcHtml = '<strong style="color:var(--color-primary);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;">Services &amp; Frequency</strong><div style="margin-top:0.5rem;display:grid;gap:0.3rem;">';
-        svcHtml += '<span>🧹 ' + (checked.length ? checked.join(', ') : 'None selected') + '</span>';
-        svcHtml += '<span>📅 Frequency: ' + (freq ? freq.value : 'Not specified') + '</span>';
-        svcHtml += '</div>';
-        document.getElementById('summary-services').innerHTML = svcHtml;
+        var checked = Array.from(
+          document.querySelectorAll('input[name="services[]"]:checked'),
+        ).map(function (c) {
+          return c.value;
+        });
+        var freq = document.querySelector('input[name="frequency"]:checked');
+        var svcHtml =
+          '<strong style="color:var(--color-primary);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;">Services &amp; Frequency</strong><div style="margin-top:0.5rem;display:grid;gap:0.3rem;">';
+        svcHtml +=
+          "<span>🧹 " +
+          (checked.length ? checked.join(", ") : "None selected") +
+          "</span>";
+        svcHtml +=
+          "<span>📅 Frequency: " +
+          (freq ? freq.value : "Not specified") +
+          "</span>";
+        svcHtml += "</div>";
+        document.getElementById("summary-services").innerHTML = svcHtml;
 
         /* Facility */
-        var addr    = document.getElementById('q-address').value;
-        var ind     = document.getElementById('q-industry').value;
-        var size    = document.getElementById('q-size').value;
-        var floors  = document.getElementById('q-floors').value;
-        var start   = document.getElementById('q-start').value;
-        var notes   = document.getElementById('q-notes').value;
-        var facHtml = '<strong style="color:var(--color-primary);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;">Facility Details</strong><div style="margin-top:0.5rem;display:grid;gap:0.3rem;">';
-        facHtml += '<span>📍 ' + addr + '</span>';
-        facHtml += '<span>🏭 Industry: ' + (ind || 'Not specified') + '</span>';
-        if (size)   facHtml += '<span>📐 Size: ' + size + '</span>';
-        if (floors) facHtml += '<span>🏢 Floors: ' + floors + '</span>';
-        if (start)  facHtml += '<span>📅 Start date: ' + start + '</span>';
-        if (notes)  facHtml += '<span>📝 Notes: ' + notes + '</span>';
-        facHtml += '</div>';
-        document.getElementById('summary-facility').innerHTML = facHtml;
+        var addr = document.getElementById("q-address").value;
+        var ind = document.getElementById("q-industry").value;
+        var size = document.getElementById("q-size").value;
+        var floors = document.getElementById("q-floors").value;
+        var start = document.getElementById("q-start").value;
+        var notes = document.getElementById("q-notes").value;
+        var facHtml =
+          '<strong style="color:var(--color-primary);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;">Facility Details</strong><div style="margin-top:0.5rem;display:grid;gap:0.3rem;">';
+        facHtml += "<span>📍 " + addr + "</span>";
+        facHtml += "<span>🏭 Industry: " + (ind || "Not specified") + "</span>";
+        if (size) facHtml += "<span>📐 Size: " + size + "</span>";
+        if (floors) facHtml += "<span>🏢 Floors: " + floors + "</span>";
+        if (start) facHtml += "<span>📅 Start date: " + start + "</span>";
+        if (notes) facHtml += "<span>📝 Notes: " + notes + "</span>";
+        facHtml += "</div>";
+        document.getElementById("summary-facility").innerHTML = facHtml;
       }
 
       /* Show success state if redirected back after FormSubmit */
       (function () {
-        if (window.location.search.includes('sent=true')) {
-          var form    = document.getElementById('quote-form');
-          var prog    = document.getElementById('step-progress');
-          var success = document.getElementById('quote-success');
+        if (window.location.search.includes("sent=true")) {
+          var form = document.getElementById("quote-form");
+          var prog = document.getElementById("step-progress");
+          var success = document.getElementById("quote-success");
           if (form && success) {
-            form.style.display    = 'none';
-            prog.style.display    = 'none';
-            success.style.display = 'block';
+            form.style.display = "none";
+            prog.style.display = "none";
+            success.style.display = "block";
           }
         }
       })();
